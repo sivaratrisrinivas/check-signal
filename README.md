@@ -2,7 +2,7 @@
 
 **Which checks on a personal AI benchmark actually decide the pick?**
 
-Live: https://check-signal.onrender.com · 75 s video: https://check-signal.onrender.com/every-check-signal-demo.mp4 · [Memo](https://check-signal.onrender.com/memo.html)
+Live: https://check-signal.onrender.com · 88 s video: https://check-signal.onrender.com/every-check-signal-demo.mp4 · [Memo](https://check-signal.onrender.com/memo.html)
 
 **Why.** On release day you open your benchmark to decide whether to switch models. You see one score per model. You can't tell which of your own standards that score reflects, or whether a check can tell the models apart at all.
 
@@ -19,7 +19,7 @@ Live: https://check-signal.onrender.com · 75 s video: https://check-signal.onre
 ```bash
 git clone https://github.com/sivaratrisrinivas/check-signal && cd check-signal
 python3 build.py && python3 -m http.server -d site 8000   # stdlib only; open localhost:8000
-pip install -r requirements.txt && python3 -m pytest -q   # 12 plain tests
+pip install -r requirements.txt && python3 -m pytest -q   # 12 plain tests, no eval set
 python3 fetch.py && python3 build.py                      # optional: re-read the live pages
 ```
 
