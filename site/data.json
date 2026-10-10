@@ -1,0 +1,340 @@
+{
+ "summary": {
+  "models": 5,
+  "tasks": 5,
+  "runs": 25,
+  "checks": 34,
+  "same_result": 12,
+  "always_pass": 11,
+  "always_fail": 1,
+  "decides": 22,
+  "model_checks": 29,
+  "model_checks_always_pass": 7,
+  "share_same_pct": 35
+ },
+ "reconcile": {
+  "cells_checked": 25,
+  "cell_mismatches": [],
+  "overall_mismatches": []
+ },
+ "flags": [
+  {
+   "id": "shared-check-one-task",
+   "title": "Shared check “ai-wording” fails 4 of 5 models, only in tend-feed-card-writing",
+   "facts": [
+    "Evidence on every failing run: “shared AI-tell phrases: its important to note”",
+    "Passes on all models in the other 4 tasks",
+    "GPT-6.1 Sol: phrase not found in the public ANSWER.md",
+    "GPT-6 Sol: no public answer file to compare",
+    "Sonnet 5.5: phrase not found in the public ANSWER.md",
+    "GPT-5.6: phrase not found in the public ANSWER.md",
+    "Opus 5.5 passes; its run is dated 20 Sep 2026 and its evidence says “inspected answer.md”"
+   ],
+   "question": "Is the phrase coming from a file other than the answer, like an input the check also reads?"
+  },
+  {
+   "id": "tokens",
+   "title": "4 runs show missing or very low token counts",
+   "facts": [
+    "Opus 5.5 on article-opening-feedback: 5,915 tokens vs a task median of 52,801",
+    "Opus 5.5 on personal-benchmark-paragraph-first-draft: 5,446 tokens vs a task median of 120,309",
+    "Opus 5.5 on tend-feed-card-writing: no token count shown",
+    "Opus 5.5 on literary-analysis-follow-up: 2,376 tokens vs a task median of 92,408"
+   ],
+   "question": "Are these counts complete? A cost view built on them would favor these runs."
+  },
+  {
+   "id": "single-run",
+   "title": "Every cell is one run; runs span 19 Sep to 1 Oct 2026",
+   "facts": [
+    "25 cells, 1 latest run each, so run-to-run variance isn't visible",
+    "Models with runs on more than one date: Opus 5.5"
+   ],
+   "question": "Would 3 runs per cell change any tie or gap of one check? Every’s own guide suggests running a task three times."
+  },
+  {
+   "id": "inspected-literary-analysis-follow-up",
+   "title": "The shared code check read different files on literary-analysis-follow-up",
+   "facts": [
+    "GPT-6.1 Sol, GPT-6 Sol, Sonnet 5.5: inspected ANSWER.md, inputs/context.md, inputs/pasted-text.txt",
+    "Opus 5.5, GPT-5.6: inspected ANSWER.md"
+   ],
+   "question": "Should every model's answer be checked against the same set of files?"
+  }
+ ],
+ "ties": [
+  {
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "models": [
+    "GPT-6.1 Sol",
+    "GPT-6 Sol",
+    "Sonnet 5.5",
+    "Opus 5.5",
+    "GPT-5.6"
+   ],
+   "patterns": [
+    {
+     "failed": [
+      "R04. Example stays at the definition level"
+     ],
+     "models": [
+      "GPT-6.1 Sol",
+      "GPT-6 Sol",
+      "Opus 5.5",
+      "GPT-5.6"
+     ]
+    },
+    {
+     "failed": [
+      "R01. Revised first sentence answers the question"
+     ],
+     "models": [
+      "Sonnet 5.5"
+     ]
+    }
+   ],
+   "reasons": {
+    "GPT-6.1 Sol::R04. Example stays at the definition level": "The example stays in the exact task mechanics Dan called \"two in the weeds\": it walks through asking the AI to critique an opening and then judging that critique (\"You save an opening and the request you gave the AI... compare how many of your checks its feedback passes\"), sharpening rather than removing the critique-of-a-critique workflow and adding input-saving steps.",
+    "GPT-6 Sol::R04. Example stays at the definition level": "The example is the workflow the rubric rules out: \"Say you ask AI for feedback on an article opening. Give the same opening to several models, then check their feedback,\" which walks through checking a critique of an opening.",
+    "Sonnet 5.5::R01. Revised first sentence answers the question": "The candidate paragraph's first sentence defines generic benchmarks with an unpacked metaphor — \"Public benchmarks are like SAT scores: they tell you roughly how capable a model is...\" — and only reaches the personal benchmark in the second and third sentences.",
+    "Opus 5.5::R04. Example stays at the definition level": "The example walks through the editing workflow the rubric warns against: \"hand a model an opening you've already edited, ask for feedback, and check its answer the way you would.\"",
+    "GPT-5.6::R04. Example stays at the definition level": "The example walks through the critique workflow (\"giving feedback on an article opening\" goes to several models, then each critique is graded on \"Did it catch that the headline buried the strongest claim?\"), which is the task mechanics the rubric's FAIL condition names."
+   }
+  },
+  {
+   "task": "tend-feed-card-writing",
+   "score": 50,
+   "models": [
+    "GPT-6 Sol",
+    "Sonnet 5.5",
+    "GPT-5.6"
+   ],
+   "patterns": [
+    {
+     "failed": [
+      "T01. Can the reader understand the headline on a first reading?",
+      "T05. Can the reader understand the concrete result without opening the sources?",
+      "ai-wording"
+     ],
+     "models": [
+      "GPT-6 Sol"
+     ]
+    },
+    {
+     "failed": [
+      "T04. Does the body develop the headline into a connected explanation?",
+      "T05. Can the reader understand the concrete result without opening the sources?",
+      "ai-wording"
+     ],
+     "models": [
+      "Sonnet 5.5"
+     ]
+    },
+    {
+     "failed": [
+      "T02. Does the headline give the reader a specific reason to care?",
+      "T05. Can the reader understand the concrete result without opening the sources?",
+      "ai-wording"
+     ],
+     "models": [
+      "GPT-5.6"
+     ]
+    }
+   ],
+   "reasons": {
+    "GPT-6 Sol::ai-wording": "shared AI-tell phrases: its important to note",
+    "GPT-6 Sol::T01. Can the reader understand the headline on a first reading?": "The lead headline, \"Banning provider counts made @Every drop useful timing figures elsewhere,\" uses the compressed shorthand \"provider counts\"; the reader must translate it (an outside copy editor's internal stage counts) to see what was targeted.",
+    "GPT-6 Sol::T05. Can the reader understand the concrete result without opening the sources?": "The lead card's \"a disclaimer scored worst, 0/3\" is an unexplained metric, and the quote \"names the class as loudly as a ban\" relies on the undefined term \"class,\" so the result is not fully clear without opening the sources.",
+    "Sonnet 5.5::ai-wording": "shared AI-tell phrases: its important to note",
+    "Sonnet 5.5::T04. Does the body develop the headline into a connected explanation?": "The face never says the suppression rule enumerated counts, so the jump from a jargon ban to \"drop it everywhere\" and then to an unintroduced \"numbers rule\" scoring \"0 of 3\" leaves the reader to reconstruct how the fix, the priming effect, and the score relate.",
+    "Sonnet 5.5::T05. Can the reader understand the concrete result without opening the sources?": "The concrete result is never stated on the face — that planted timings dissolved into qualitative phrases in replies where nothing had failed — and it stands in an unexplained metric (\"scored worst, 0 of 3\", of what test or scale) plus the abstract quote \"primes the model to drop it everywhere\", so the reader must open the PR to learn what actually changed.",
+    "GPT-5.6::ai-wording": "shared AI-tell phrases: its important to note",
+    "GPT-5.6::T02. Does the headline give the reader a specific reason to care?": "The headline says only \"other numbers\" and does not say what useful information was lost; the face later says it was timing details, so the reader must supply the payoff.",
+    "GPT-5.6::T05. Can the reader understand the concrete result without opening the sources?": "\"main scored 3/3; variants scored 1/3, 0/3, and 1/3\" and \"Even 'never overrides the numbers rule' did worst\" do not explain what the scores measure, what \"main\" is, or what the numbers rule is, so the reader must open the PR to understand the comparison."
+   }
+  },
+  {
+   "task": "article-opening-feedback",
+   "score": 67,
+   "models": [
+    "GPT-6 Sol",
+    "GPT-5.6"
+   ],
+   "patterns": [
+    {
+     "failed": [
+      "S02b. Interesting headline: replacement",
+      "S03. Promise cashed out",
+      "S04a. Headline and dek connect: diagnosis",
+      "S06. Diagnoses delayed hook"
+     ],
+     "models": [
+      "GPT-6 Sol"
+     ]
+    },
+    {
+     "failed": [
+      "S02b. Interesting headline: replacement",
+      "S04a. Headline and dek connect: diagnosis",
+      "S05. Weasel words",
+      "S06. Diagnoses delayed hook"
+     ],
+     "models": [
+      "GPT-5.6"
+     ]
+    }
+   ],
+   "reasons": {
+    "GPT-6 Sol::S02b. Interesting headline: replacement": "Its only proposed headline, 'Our CEO Wants Us to Use More Tokens,' is the exact example the rubric names as failing because it only reports an internal directive.",
+    "GPT-6 Sol::S03. Promise cashed out": "Its headline frames the piece as a workplace story about a CEO directive, and it wrongly says the ROI dek promises a calculation instead of accepting qualitative returns.",
+    "GPT-6 Sol::S04a. Headline and dek connect: diagnosis": "It criticizes the headline and dek separately and never addresses whether the dek develops the headline.",
+    "GPT-6 Sol::S06. Diagnoses delayed hook": "Calling the first sentence 'slow' is vague; the feedback never notes that its point ('reining yourself in') arrives only at the end.",
+    "GPT-5.6::S02b. Interesting headline: replacement": "The recommended headline 'Spend First. Do the Token Math Later.' is essentially the rubric's failing example 'Spend the Tokens, Then Do the Math': it only says evaluation comes later and tells the reader nothing specific.",
+    "GPT-5.6::S04a. Headline and dek connect: diagnosis": "It critiques 'Token Math' and 'What's the ROI on experimentation?' separately and never says the dek fails to develop the headline or that their connection is unclear.",
+    "GPT-5.6::S05. Weasel words": "The suggested opening states the statistic, then delays the ambition implication behind a familiar reaction: 'His reaction isn't to rein himself in. It's to wonder whether the rest of the team is experimenting ambitiously enough.'",
+    "GPT-5.6::S06. Diagnoses delayed hook": "The offered opening still hooks on the cutback contrast, 'His reaction isn't to rein himself in,' which implies an unsupported default expectation to cut back for the CEO."
+   }
+  },
+  {
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 25,
+   "models": [
+    "Opus 5.5",
+    "GPT-5.6"
+   ],
+   "patterns": [
+    {
+     "failed": [
+      "D01. First sentence answers the question",
+      "D02. Explain the terms the reader needs",
+      "D03. Each sentence follows the previous one",
+      "D04. Analogy clicks without algebra",
+      "D06. Claims fit the supplied context",
+      "D07. Tests performance on your work"
+     ],
+     "models": [
+      "Opus 5.5"
+     ]
+    },
+    {
+     "failed": [
+      "D01. First sentence answers the question",
+      "D02. Explain the terms the reader needs",
+      "D03. Each sentence follows the previous one",
+      "D04. Analogy clicks without algebra",
+      "D05. Make personal standards concrete",
+      "D07. Tests performance on your work"
+     ],
+     "models": [
+      "GPT-5.6"
+     ]
+    }
+   ],
+   "reasons": {
+    "Opus 5.5::D01. First sentence answers the question": "Both versions open with \"A personal benchmark is a test built from your own work\", which describes what the benchmark is made of but not what it does for the reader, and it never mentions AI or choosing a model.",
+    "Opus 5.5::D02. Explain the terms the reader needs": "Checks are explained with yes-or-no examples, but both versions end with \"that correction becomes a new case and a new check\" without ever explaining what a \"case\" is.",
+    "Opus 5.5::D03. Each sentence follows the previous one": "In the long version, \"A personal benchmark is a reference check.\" leads straight into \"And you don't have to build it by hand.\", leaving the analogy unexplained and changing subject abruptly.",
+    "Opus 5.5::D04. Analogy clicks without algebra": "Both versions say \"A personal benchmark is a reference check\" without showing how a reference check matches a personal benchmark, so the reader has to work out the comparison alone.",
+    "Opus 5.5::D06. Claims fit the supplied context": "The short version says \"it builds itself: every time you correct an AI, that correction becomes a new case and a new check,\" which presents a planned automatic capture as a current feature; the notes admit it is only the next step.",
+    "Opus 5.5::D07. Tests performance on your work": "Both versions present \"A personal benchmark is a reference check\" as the explanation, which is the secondhand-report framing rather than a work trial.",
+    "GPT-5.6::D01. First sentence answers the question": "The ANSWER.md paragraph opens with \"A personal benchmark is a reference check for AI.\" This analogy has to be decoded and does not say what the reader gets from a personal benchmark.",
+    "GPT-5.6::D02. Explain the terms the reader needs": "The paragraph says models are scored \"against checks drawn from your own judgment and corrections\" but never explains what a \"check\" is.",
+    "GPT-5.6::D03. Each sentence follows the previous one": "The opening \"reference check\" framing is dropped: the next sentence switches to \"tests them on work you've actually done\" without linking the two, so the reader has to supply the missing connection.",
+    "GPT-5.6::D04. Analogy clicks without algebra": "It leads with the compressed line \"a reference check for AI\" and never says what corresponds to what, which is the failure pattern the rubric names.",
+    "GPT-5.6::D05. Make personal standards concrete": "It mentions \"your own judgment and corrections\" and \"what 'good' means to you\" but gives no example of an actual standard, such as a headline being interesting or following AP style.",
+    "GPT-5.6::D07. Tests performance on your work": "It presents a personal benchmark as \"a reference check for AI,\" which endorses the secondhand-report framing that Dan rejected in favor of a work trial, even though the paragraph also mentions testing on your work."
+   }
+  }
+ ],
+ "deciding_only_overall": {
+  "GPT-6.1 Sol": 80,
+  "GPT-6 Sol": 44,
+  "Sonnet 5.5": 35,
+  "Opus 5.5": 31,
+  "GPT-5.6": 29
+ },
+ "public_overall": {
+  "GPT-6.1 Sol": 83,
+  "GPT-6 Sol": 64,
+  "Sonnet 5.5": 55,
+  "Opus 5.5": 53,
+  "GPT-5.6": 51
+ },
+ "same_result_checks": [
+  {
+   "task": "article-opening-feedback",
+   "check": "ai-wording",
+   "label": "always_pass",
+   "question": "Keep as a floor, shown apart from the score?"
+  },
+  {
+   "task": "article-opening-feedback",
+   "check": "S02c. Headline makes sense on its own",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "article-opening-feedback",
+   "check": "S01. On topic",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "article-opening-feedback",
+   "check": "S02a. Interesting headline: diagnosis",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "article-opening-feedback",
+   "check": "S04b. Headline and dek connect: replacement",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "personal-benchmark-paragraph-first-draft",
+   "check": "ai-wording",
+   "label": "always_pass",
+   "question": "Keep as a floor, shown apart from the score?"
+  },
+  {
+   "task": "personal-benchmark-paragraph-revision",
+   "check": "ai-wording",
+   "label": "always_pass",
+   "question": "Keep as a floor, shown apart from the score?"
+  },
+  {
+   "task": "personal-benchmark-paragraph-revision",
+   "check": "R02. Explain checks before relying on them",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "personal-benchmark-paragraph-revision",
+   "check": "R03. Show a concrete personal standard",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "tend-feed-card-writing",
+   "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+   "label": "always_pass",
+   "question": "Retire or make harder?"
+  },
+  {
+   "task": "literary-analysis-follow-up",
+   "check": "Ask what the user sees",
+   "label": "always_fail",
+   "question": "Reword, or keep as a known gap?"
+  },
+  {
+   "task": "literary-analysis-follow-up",
+   "check": "ai-wording",
+   "label": "always_pass",
+   "question": "Keep as a floor, shown apart from the score?"
+  }
+ ],
+ "source": "https://checks.every.to/p/dans-editorial-checks",
+ "fetched_at": "2026-10-10T05:06:59Z"
+}

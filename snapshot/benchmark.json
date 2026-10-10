@@ -1,0 +1,1983 @@
+{
+ "source": "https://checks.every.to/p/dans-editorial-checks",
+ "feed_url": "https://checks.every.to/p/dans-editorial-checks/feed",
+ "fetched_at": "2026-10-10T05:06:59Z",
+ "feed_generated_at": "2026-10-10T05:06:27Z",
+ "tasks": [
+  "article-opening-feedback",
+  "personal-benchmark-paragraph-first-draft",
+  "personal-benchmark-paragraph-revision",
+  "tend-feed-card-writing",
+  "literary-analysis-follow-up"
+ ],
+ "models": [
+  "GPT-6.1 Sol",
+  "Sonnet 5.5",
+  "GPT-6 Sol",
+  "Opus 5.5",
+  "GPT-5.6"
+ ],
+ "feed": {
+  "schema": "every-benchmark-result/v1",
+  "benchmark": {
+   "slug": "dans-editorial-checks",
+   "title": "Dan’s Editorial Checks"
+  },
+  "runs": [
+   {
+    "id": "gpt-6.1-sol__codex__high",
+    "model": "GPT-6.1 Sol",
+    "agent": "codex",
+    "effort": "high",
+    "date": "2026-10-01",
+    "variant": null,
+    "url": "https://checks.every.to/p/dans-editorial-checks/GPT-6.1%20Sol",
+    "avg": 83,
+    "tasks": {
+     "07-literary-analysis-follow-up": 67,
+     "02-personal-benchmark-paragraph-first-draft": 100,
+     "01-article-opening-feedback": 83,
+     "03-personal-benchmark-paragraph-revision": 80,
+     "04-tend-feed-card-writing": 83
+    }
+   },
+   {
+    "id": "claude-beignet-eap[1m]__claude__high",
+    "model": "Sonnet 5.5",
+    "agent": "claude",
+    "effort": "high",
+    "date": "2026-09-24",
+    "variant": null,
+    "url": "https://checks.every.to/p/dans-editorial-checks/Sonnet%205.5",
+    "avg": 55,
+    "tasks": {
+     "04-tend-feed-card-writing": 50,
+     "02-personal-benchmark-paragraph-first-draft": 38,
+     "07-literary-analysis-follow-up": 33,
+     "01-article-opening-feedback": 75,
+     "03-personal-benchmark-paragraph-revision": 80
+    }
+   },
+   {
+    "id": "zenith-alpha__codex__high",
+    "model": "GPT-6 Sol",
+    "agent": "codex",
+    "effort": "high",
+    "date": "2026-09-22",
+    "variant": null,
+    "url": "https://checks.every.to/p/dans-editorial-checks/GPT-6%20Sol",
+    "avg": 64,
+    "tasks": {
+     "07-literary-analysis-follow-up": 33,
+     "01-article-opening-feedback": 67,
+     "04-tend-feed-card-writing": 50,
+     "03-personal-benchmark-paragraph-revision": 80,
+     "02-personal-benchmark-paragraph-first-draft": 88
+    }
+   },
+   {
+    "id": "claude-wafer-eap__claude__high",
+    "model": "Opus 5.5",
+    "agent": "claude",
+    "effort": "high",
+    "date": "2026-09-21",
+    "variant": null,
+    "url": "https://checks.every.to/p/dans-editorial-checks/Opus%205.5",
+    "avg": 53,
+    "tasks": {
+     "07-literary-analysis-follow-up": 33,
+     "02-personal-benchmark-paragraph-first-draft": 25,
+     "01-article-opening-feedback": 58,
+     "03-personal-benchmark-paragraph-revision": 80,
+     "04-tend-feed-card-writing": 67
+    }
+   },
+   {
+    "id": "gpt-5.6-sol__codex__high",
+    "model": "GPT-5.6",
+    "agent": "codex",
+    "effort": "high",
+    "date": "2026-09-21",
+    "variant": null,
+    "url": "https://checks.every.to/p/dans-editorial-checks/GPT-5.6",
+    "avg": 51,
+    "tasks": {
+     "01-article-opening-feedback": 67,
+     "04-tend-feed-card-writing": 50,
+     "03-personal-benchmark-paragraph-revision": 80,
+     "07-literary-analysis-follow-up": 33,
+     "02-personal-benchmark-paragraph-first-draft": 25
+    }
+   }
+  ],
+  "generated_at": "2026-10-10T05:06:27Z"
+ },
+ "cells": [
+  {
+   "model": "GPT-6.1 Sol",
+   "task": "article-opening-feedback",
+   "score": 83,
+   "run_id": 1833,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1833",
+   "date": "1 Oct 2026",
+   "tokens": 80876,
+   "passed": 10,
+   "applicable": 12,
+   "verdicts": [
+    {
+     "check": "S04a. Headline and dek connect: diagnosis",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The hed and dek are critiqued in separate paragraphs in isolation—\"'Token Math' names the subject without giving readers a reason to open\" and \"'What's the ROI on experimentation?' is generic\"—with no comment anywhere on whether the dek develops or connects to the headline.",
+     "question": "S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on? PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but ",
+     "evidence": null
+    },
+    {
+     "check": "S08. CEO-specific cutback insight",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The only critique of the lead-in is that it is tentative and delays the news, plus a note that \"'highest spender' implies a dollar ranking\"; nowhere does the feedback observe that no one would ask the CEO to rein himself in, so the rewrite merely omits the cutback contrast without showing the CEO-aware insight.",
+     "question": "S08. Does the AI’s feedback recognize and resolve the CEO-specific flaw in a default cutback setup? PASS if: The feedback recognizes that Dan is the CEO, so a generic claim that the highest spender would normally be asked or expected to cut back does not fit this case, and every usable offered repla",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    },
+    {
+     "check": "S02c. Headline makes sense on its own",
+     "scope": "this task",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Both offered headlines—\"You Might Be Using Too Few AI Tokens\" and \"The Case for Using More AI Tokens\"—state a clear subject (AI tokens), action (using too few/more), and evaluative claim that a reader can restate without the dek or article.",
+     "question": "S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, acti",
+     "evidence": null
+    },
+    {
+     "check": "S01. On topic",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Treats \"Token Math\" as naming the subject (on-topic but unopenable) and its replacements—\"You Might Be Using Too Few AI Tokens\" / \"The Case for Using More AI Tokens\"—stay on the article's core token-spending/ambitious-experimentation idea.",
+     "question": "S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article? PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys o",
+     "evidence": null
+    },
+    {
+     "check": "S02a. Interesting headline: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "States plainly that \"'Token Math' names the subject without giving readers a reason to open\" and that the surprising question—whether people use too few tokens—is the real hook being missed.",
+     "question": "S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”? PASS if: The feedback recognizes that Token Math merely names the topic and",
+     "evidence": null
+    },
+    {
+     "check": "S02b. Interesting headline: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Offers \"You Might Be Using Too Few AI Tokens\" and \"The Case for Using More AI Tokens,\" both concise, email-subject-length, second-person/argument-framed and draft-supported, matching the rubric's named passing directions.",
+     "question": "S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending impr",
+     "evidence": null
+    },
+    {
+     "check": "S03. Promise cashed out",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Flags that the original dek \"suggests a calculation the draft doesn't deliver,\" and its replacement dek (\"ambitious AI experiments get room to run—then scrutiny over what they cost, produce, and teach\") promises exactly the qualitative payoff the body delivers.",
+     "question": "S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard? PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promi",
+     "evidence": null
+    },
+    {
+     "check": "S04b. Headline and dek connect: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Proposes HED \"You Might Be Using Too Few AI Tokens\" with DEK \"At Every, ambitious AI experiments get room to run—then scrutiny over what they cost, produce, and teach,\" where the dek clearly deepens the headline's claim with the mechanism that makes more spending defensible.",
+     "question": "S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it? PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the h",
+     "evidence": null
+    },
+    {
+     "check": "S05. Weasel words",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Names the hedge directly—\"'Often if … you might think' delays the news with a tentative generalization\"—and its replacement opening starts cleanly with the gap, dropping the empty lead-in.",
+     "question": "S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative? PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phras",
+     "evidence": null
+    },
+    {
+     "check": "S06. Diagnoses delayed hook",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Identifies the delayed payoff rather than just weak prose: the tentative generalization \"delays the news\" and \"Start with the three-times gap,\" tied to the reversal it names as the strongest idea.",
+     "question": "S06. Does the AI’s feedback diagnose that the opening delays its real point or hook? PASS if: The feedback identifies what the reader is made to wait for and why the lead-in is slow. It may notice that the first sentence’s condition-heavy setup postpones “reining yourself in” until the end, that a g",
+     "evidence": null
+    },
+    {
+     "check": "S07. Interesting setup immediately",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Replacement leads with \"more than three times as many OpenAI tokens as the company's next-highest user\" and lands the implication in the very next sentence—\"wondering whether the rest of us are being ambitious enough with AI\"—preserving the more-than-three-times comparison and the inference's uncertainty.",
+     "question": "S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence? PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6.1 Sol",
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 100,
+   "run_id": 1834,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1834",
+   "date": "1 Oct 2026",
+   "tokens": 116426,
+   "passed": 8,
+   "applicable": 8,
+   "verdicts": [
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md"
+    },
+    {
+     "check": "D01. First sentence answers the question",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The sole candidate (ANSWER.md) opens \"A personal benchmark is a set of tests built from your real work that measures how well an AI meets your standards,\" which plainly states what the reader gets.",
+     "question": "D01. Does the first sentence answer what a personal benchmark is in plain, accurate terms? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked o",
+     "evidence": null
+    },
+    {
+     "check": "D02. Explain the terms the reader needs",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The noun \"checks\" in \"Your corrections become checks\" is preceded by the operational example \"then check whether its suggestions strengthen the headline and make the opening more concrete,\" so its meaning is established at first use, and \"corrections\" is ordinary wording already present in the draft's bullet 1.",
+     "question": "D02. Can a new reader understand the terms and references needed to follow the paragraph when they appear? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, incl",
+     "evidence": null
+    },
+    {
+     "check": "D03. Each sentence follows the previous one",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The sequence runs definition → editor example → where new checks come from (your corrections) → \"Run the same tests on different models,\" each sentence tied to the prior one by the tests/checks thread with no unbridged leap.",
+     "question": "D03. Does the paragraph develop its explanation in a coherent sequence, without missing connections between ideas? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.",
+     "evidence": null
+    },
+    {
+     "check": "D04. Analogy clicks without algebra",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The paragraph uses no analogy — no SAT, reference-check, or other comparison appears — so the check is satisfied by default.",
+     "question": "D04. If the paragraph uses an analogy, does it clarify the concept immediately? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-pref",
+     "evidence": null
+    },
+    {
+     "check": "D05. Make personal standards concrete",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It names an actual standard a person would set (\"whether its suggestions strengthen the headline and make the opening more concrete\") and then says \"Run the same tests on different models, and you can see which one does the best work for you.\"",
+     "question": "D05. Does the paragraph make a person's own standard concrete? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-preferred options. Ju",
+     "evidence": null
+    },
+    {
+     "check": "D06. Claims fit the supplied context",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Running one task across models against judgment-derived checks and corrections becoming checks both track the Rick demo transcript, and the paragraph makes no claim of automatic or one-click capture beyond the source.",
+     "question": "D06. Do the paragraph's claims about how the product works fit the supplied context? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less",
+     "evidence": null
+    },
+    {
+     "check": "D07. Tests performance on your work",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It frames the benchmark as a direct trial — \"a test might ask a model to give feedback on an article opening\" and \"Run the same tests on different models\" — with no reference-check or secondhand-report framing.",
+     "question": "D07. Does the paragraph frame a personal benchmark as a direct trial of a model on your work? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranke",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6.1 Sol",
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "run_id": 1835,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1835",
+   "date": "1 Oct 2026",
+   "tokens": 97835,
+   "passed": 4,
+   "applicable": 5,
+   "verdicts": [
+    {
+     "check": "R04. Example stays at the definition level",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The example stays in the exact task mechanics Dan called \"two in the weeds\": it walks through asking the AI to critique an opening and then judging that critique (\"You save an opening and the request you gave the AI... compare how many of your checks its feedback passes\"), sharpening rather than removing the critique-of-a-critique workflow and adding input-saving steps.",
+     "question": "R04. Does the example help define a personal benchmark without taking the reader into task mechanics? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ig",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md, notion-inline-comment.txt"
+    },
+    {
+     "check": "R01. Revised first sentence answers the question",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The opening sentence is a plain direct answer — \"A personal benchmark shows you which AI model is best at the work you need help with\" — stating what it tells the person about their own work rather than defining generic benchmarks or opening with a metaphor or task/check list.",
+     "question": "R01. Does the revision replace the flagged abstract opening with a plain answer to 'What is a personal benchmark?' Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ",
+     "evidence": null
+    },
+    {
+     "check": "R02. Explain checks before relying on them",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Before using the word \"checks,\" it defines them in ordinary words as the person's own \"questions that capture what makes feedback useful to you,\" followed by two sample yes/no questions, so the reader knows what standard is set and that the person sets it (\"your checks,\" \"your corrections\").",
+     "question": "R02. Does the revised paragraph explain what a check or pass/fail standard means to a new reader? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore",
+     "evidence": null
+    },
+    {
+     "check": "R03. Show a concrete personal standard",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives recognizable editorial standards — \"Does it identify the strongest claim for the headline? Does it suggest concrete wording for the opening?\" — and ties them to cross-model comparison with \"Give each model the same opening and request, then compare how many of your checks its feedback passes.\"",
+     "question": "R03. Does the revision illustrate the standards a person can set for comparing models? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore the model'",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6.1 Sol",
+   "task": "tend-feed-card-writing",
+   "score": 83,
+   "run_id": 1839,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1839",
+   "date": "1 Oct 2026",
+   "tokens": 2624317,
+   "passed": 5,
+   "applicable": 6,
+   "verdicts": [
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "fail",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "shared AI-tell phrases: its important to note",
+     "flagged_phrase": "its important to note",
+     "answer_file_public": true,
+     "phrase_in_answer_file": false
+    },
+    {
+     "check": "T01. Can the reader understand the headline on a first reading?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "\"Engineer A reports that banning provider counts erased timings in unrelated replies\" names both the targeted information (the provider's counts) and the collaterally lost information (timings) in a recognizable situation; the other three titles (Person Q on connecting ideas, the compounding diagram looking like work, the bot roster separating claims from observed handoffs) likewise read cleanly as written.",
+     "question": "T01. Can the reader understand the headline on a first reading? PASS if: The headline presents a recognizable situation and a clear action, finding, or question in wording the reader can follow as written. The roles of any technical terms are apparent. FAIL if: The reader has to translate compressed",
+     "evidence": null
+    },
+    {
+     "check": "T02. Does the headline give the reader a specific reason to care?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The headline states a specific, surprising consequence with the lost information kind identified — timings disappearing in replies where nothing had failed — rather than a generic \"the instruction had side effects\" lesson.",
+     "question": "T02. Does the headline give the reader a specific reason to care? PASS if: The reader can see what useful or surprising thing they will learn, or what meaningful consequence is at stake. FAIL if: An effect is named, but the reader has to supply what information or useful function is at stake before ",
+     "evidence": null
+    },
+    {
+     "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The first body sentence is the finding itself with concrete examples (\"banning a provider's internal counts also made unrelated replies drop timings such as 250ms, 120ms and 8s\"), with only a short attribution clause and no stacked or unresolved setup.",
+     "question": "T03. Does the opening get to its point without making the reader hold a long setup in mind? PASS if: The first sentence quickly establishes a concrete situation, action, or finding that helps the reader understand the card as it unfolds. Necessary context has a clear purpose. FAIL if: Process labels",
+     "evidence": null
+    },
+    {
+     "check": "T04. Does the body develop the headline into a connected explanation?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The face moves from the collateral loss to a failed precedence-clause attempt (\"scored worst: 0/3 versus 3/3 on main\") to the narrowed remedy of banning specific debugging strings and its still-pending sweep, so the problem/attempt/outcome relationship is followable rather than a list of unrelated developments.",
+     "question": "T04. Does the body develop the headline into a connected explanation? PASS if: The body develops the headline with a connected explanation. The reader can follow how the relevant actions, reasons, and results relate, and each sentence supplies the context needed for what follows. FAIL if: The body r",
+     "evidence": null
+    },
+    {
+     "check": "T05. Can the reader understand the concrete result without opening the sources?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Without opening sources the reader learns what changed and what is unresolved — timings vanished, the disclaimer variant failed every run against main's clean baseline, the fix now bans only the provider's debugging strings, and the clean eval sweep had not yet been run — with 0/3 vs 3/3 on main giving the score a clear directional referent.",
+     "question": "T05. Can the reader understand the concrete result without opening the sources? PASS if: The visible card explains enough of the event or change and the consequence it describes for the intended reader to understand what happened. Any result, score, or unfamiliar category essential to that explanati",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6.1 Sol",
+   "task": "literary-analysis-follow-up",
+   "score": 67,
+   "run_id": 1837,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1837",
+   "date": "1 Oct 2026",
+   "tokens": 92408,
+   "passed": 2,
+   "applicable": 3,
+   "verdicts": [
+    {
+     "check": "Ask what the user sees",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Instead of asking, the response assumes the referent (\"I'm assuming you mean McDonald's the restaurant chain\") and then supplies its own resemblance — Teilhard's Church as \"the only international organization that works\" making \"his spiritual allegiance sound surprisingly like confidence in a successful global operation\" plus an \"institution's promise to serve everyone\" tension — with no clarifying question or invitation for the user to explain.",
+     "question": "Does the response ask the user to explain what they see in the McDonald’s comparison before supplying a connection?",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md, inputs/context.md, inputs/pasted-text.txt"
+    },
+    {
+     "check": "No unearned praise",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The response offers no flattery and stays explicitly uncertain, saying \"I don't see an obvious connection to the essay's structure\" and \"That's a tentative connection; your remark alone doesn't establish which resemblance you have in mind.\"",
+     "question": "Does the response avoid praising or endorsing the McDonald’s comparison before understanding it?",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6 Sol",
+   "task": "article-opening-feedback",
+   "score": 67,
+   "run_id": 1253,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1253",
+   "date": "22 Sep 2026",
+   "tokens": 89625,
+   "passed": 8,
+   "applicable": 12,
+   "verdicts": [
+    {
+     "check": "S02b. Interesting headline: replacement",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Its only proposed headline, 'Our CEO Wants Us to Use More Tokens,' is the exact example the rubric names as failing because it only reports an internal directive.",
+     "question": "S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending impr",
+     "evidence": null
+    },
+    {
+     "check": "S03. Promise cashed out",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Its headline frames the piece as a workplace story about a CEO directive, and it wrongly says the ROI dek promises a calculation instead of accepting qualitative returns.",
+     "question": "S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard? PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promi",
+     "evidence": null
+    },
+    {
+     "check": "S04a. Headline and dek connect: diagnosis",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It criticizes the headline and dek separately and never addresses whether the dek develops the headline.",
+     "question": "S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on? PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but ",
+     "evidence": null
+    },
+    {
+     "check": "S06. Diagnoses delayed hook",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Calling the first sentence 'slow' is vague; the feedback never notes that its point ('reining yourself in') arrives only at the end.",
+     "question": "S06. Does the AI’s feedback notice that I only know the point of the first sentence—“reining yourself in”—at the very end? PASS if: The feedback specifically identifies the first sentence’s delayed point or condition-heavy setup and recommends getting to its point sooner or replacing that framing en",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    },
+    {
+     "check": "S02c. Headline makes sense on its own",
+     "scope": "this task",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The only proposed headline, \"Our CEO Wants Us to Use More Tokens,\" makes a clear claim on its own, with a clear subject (our CEO), action (wants us to use) and object (more tokens) that Every readers will understand.",
+     "question": "S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, acti",
+     "evidence": null
+    },
+    {
+     "check": "S01. On topic",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The feedback says 'Token Math' is too abstract rather than off topic, and its replacement stays on Dan's call to use more tokens and on what experiments buy.",
+     "question": "S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article? PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys o",
+     "evidence": null
+    },
+    {
+     "check": "S02a. Interesting headline: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says 'Token Math' gives readers no claim to latch onto and misses the more compelling reversal: the biggest token user wants colleagues to use more AI.",
+     "question": "S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”? PASS if: The feedback recognizes that Token Math merely names the topic and",
+     "evidence": null
+    },
+    {
+     "check": "S04b. Headline and dek connect: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The proposed dek builds on the headline with the specific 3× leaderboard gap and poses the question of what ambitious experiments buy.",
+     "question": "S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it? PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the h",
+     "evidence": null
+    },
+    {
+     "check": "S05. Weasel words",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It calls the first sentence 'hedged and slow', and its replacement opening drops the 'Often… you might think about' lead-in.",
+     "question": "S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative? PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phras",
+     "evidence": null
+    },
+    {
+     "check": "S07. Interesting setup immediately",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The replacement first sentence states the more-than-three-times gap and Dan wondering whether the rest of the team is ambitious enough.",
+     "question": "S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence? PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious",
+     "evidence": null
+    },
+    {
+     "check": "S08. CEO-specific cutback insight",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The replacement opening leads with the measured gap and makes no claim that the biggest spender would normally be told to cut back.",
+     "question": "S08. Does the AI’s feedback avoid an ill-fitting default cutback reaction in every offered replacement opening for this CEO case? PASS if: Every usable offered opening avoids treating an imagined order or default expectation to cut back as the normal reaction to this CEO’s token spending. Dan: “usua",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6 Sol",
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 88,
+   "run_id": 1254,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1254",
+   "date": "22 Sep 2026",
+   "tokens": 151748,
+   "passed": 7,
+   "applicable": 8,
+   "verdicts": [
+    {
+     "check": "D01. First sentence answers the question",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The only version (ANSWER.md) opens with \"A personal benchmark is a set of tests drawn from your own work, judged by your own standards\"; that sentence never mentions AI or models and doesn't say what the reader gets, so it mostly restates 'personal' plus 'benchmark'.",
+     "question": "D01. Does the first sentence answer what a personal benchmark is in plain, accurate terms? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked o",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md"
+    },
+    {
+     "check": "D02. Explain the terms the reader needs",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "'Tests' is explained with an editor example, and 'checks' is made clear right away by saying what they ask: \"whether the headline makes the strongest claim and the prose gets more concrete.\"",
+     "question": "D02. Can a new reader understand the terms and references needed to follow the paragraph when they appear? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, incl",
+     "evidence": null
+    },
+    {
+     "check": "D03. Each sentence follows the previous one",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The paragraph moves from the definition to an example test and its checks, then to corrections growing the benchmark, then to running the tests across models, and each step builds on the one before.",
+     "question": "D03. Does the paragraph develop its explanation in a coherent sequence, without missing connections between ideas? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.",
+     "evidence": null
+    },
+    {
+     "check": "D04. Analogy clicks without algebra",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The paragraph uses no analogy; it gives a literal explanation.",
+     "question": "D04. If the paragraph uses an analogy, does it clarify the concept immediately? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-pref",
+     "evidence": null
+    },
+    {
+     "check": "D05. Make personal standards concrete",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives concrete standards (\"whether the headline makes the strongest claim and the prose gets more concrete\") and says to \"Run those tests across models\" to compare them.",
+     "question": "D05. Does the paragraph make a person's own standard concrete? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-preferred options. Ju",
+     "evidence": null
+    },
+    {
+     "check": "D06. Claims fit the supplied context",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "\"Each correction you make can become another test\" is framed as a possibility and matches the reading notes (\"With approval, Every can turn that moment into... a test case\"); picking the best model and switching to a better one matches the strategy draft.",
+     "question": "D06. Do the paragraph's claims about how the product works fit the supplied context? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less",
+     "evidence": null
+    },
+    {
+     "check": "D07. Tests performance on your work",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It describes a direct trial: the models do tests from your real work (\"ask an AI to improve a real article opening\") and are judged by your standards across models, with no reference-check framing.",
+     "question": "D07. Does the paragraph frame a personal benchmark as a direct trial of a model on your work? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranke",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6 Sol",
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "run_id": 1255,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1255",
+   "date": "22 Sep 2026",
+   "tokens": 194594,
+   "passed": 4,
+   "applicable": 5,
+   "verdicts": [
+    {
+     "check": "R04. Example stays at the definition level",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The example is the workflow the rubric rules out: \"Say you ask AI for feedback on an article opening. Give the same opening to several models, then check their feedback,\" which walks through checking a critique of an opening.",
+     "question": "R04. Does the example help define a personal benchmark without taking the reader into task mechanics? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ig",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md, notion-inline-comment.txt"
+    },
+    {
+     "check": "R01. Revised first sentence answers the question",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The paragraph opens by saying what the benchmark tells you about your own work: \"A personal benchmark tells you whether another AI model handles your work better than the one you use now.\"",
+     "question": "R01. Does the revision replace the flagged abstract opening with a plain answer to 'What is a personal benchmark?' Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ",
+     "evidence": null
+    },
+    {
+     "check": "R02. Explain checks before relying on them",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The verb \"check their feedback\" is followed by yes/no questions (\"Does it assess whether the headline makes the strongest claim?\") that the paragraph calls \"your editorial standards,\" so a reader can see that the checks are standards the person sets.",
+     "question": "R02. Does the revised paragraph explain what a check or pass/fail standard means to a new reader? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore",
+     "evidence": null
+    },
+    {
+     "check": "R03. Show a concrete personal standard",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives concrete editorial standards (\"whether the headline makes the strongest claim,\" \"identify vague wording\") and says \"You can see which model meets your editorial standards.\"",
+     "question": "R03. Does the revision illustrate the standards a person can set for comparing models? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore the model'",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6 Sol",
+   "task": "tend-feed-card-writing",
+   "score": 50,
+   "run_id": 1260,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1260",
+   "date": "22 Sep 2026",
+   "tokens": 2364566,
+   "passed": 3,
+   "applicable": 6,
+   "verdicts": [
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "fail",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "shared AI-tell phrases: its important to note",
+     "flagged_phrase": "its important to note",
+     "answer_file_public": false
+    },
+    {
+     "check": "T01. Can the reader understand the headline on a first reading?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The lead headline, \"Banning provider counts made @Every drop useful timing figures elsewhere,\" uses the compressed shorthand \"provider counts\"; the reader must translate it (an outside copy editor's internal stage counts) to see what was targeted.",
+     "question": "T01. Can the reader understand the headline on a first reading? PASS if: The headline presents a recognizable situation and a clear action, finding, or question in wording the reader can follow as written. The roles of any technical terms are apparent. FAIL if: The reader has to translate compressed",
+     "evidence": null
+    },
+    {
+     "check": "T05. Can the reader understand the concrete result without opening the sources?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The lead card's \"a disclaimer scored worst, 0/3\" is an unexplained metric, and the quote \"names the class as loudly as a ban\" relies on the undefined term \"class,\" so the result is not fully clear without opening the sources.",
+     "question": "T05. Can the reader understand the concrete result without opening the sources? PASS if: The visible card explains enough of the event or change and the consequence it describes for the intended reader to understand what happened. Any result, score, or unfamiliar category essential to that explanati",
+     "evidence": null
+    },
+    {
+     "check": "T02. Does the headline give the reader a specific reason to care?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The headlines name a concrete stake, such as useful timing figures lost as a side effect, a university IT director gating the Agent to private channels, and agent claims kept separate from observed behavior.",
+     "question": "T02. Does the headline give the reader a specific reason to care? PASS if: The reader can see what useful or surprising thing they will learn, or what meaningful consequence is at stake. FAIL if: An effect is named, but the reader has to supply what information or useful function is at stake before ",
+     "evidence": null
+    },
+    {
+     "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The faces open with a concrete action, such as \"Engineer A's Plus One PR tried to stop @Every from repeating an outside copy editor's internal counts,\" without stacked setup.",
+     "question": "T03. Does the opening get to its point without making the reader hold a long setup in mind? PASS if: The first sentence quickly establishes a concrete situation, action, or finding that helps the reader understand the card as it unfolds. Necessary context has a clear purpose. FAIL if: Process labels",
+     "evidence": null
+    },
+    {
+     "check": "T04. Does the body develop the headline into a connected explanation?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Each face moves in order from the attempt to the result to the takeaway (the rule, then the omitted timing figures, then the disclaimer result and the quote), and each sentence builds on the one before.",
+     "question": "T04. Does the body develop the headline into a connected explanation? PASS if: The body develops the headline with a connected explanation. The reader can follow how the relevant actions, reasons, and results relate, and each sentence supplies the context needed for what follows. FAIL if: The body r",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-6 Sol",
+   "task": "literary-analysis-follow-up",
+   "score": 33,
+   "run_id": 1257,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1257",
+   "date": "22 Sep 2026",
+   "tokens": 120976,
+   "passed": 1,
+   "applicable": 3,
+   "verdicts": [
+    {
+     "check": "Ask what the user sees",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Instead of asking what the user sees, the response makes up its own link: \"I'm taking 'McDonald's' to mean the chain's vast, recognizable organization. On that reading, yes: Teilhard's description of the Catholic Church as 'the only international organization that works'...\"",
+     "question": "Does the response ask the user to explain what they see in the McDonald’s comparison before supplying a connection?",
+     "evidence": null
+    },
+    {
+     "check": "No unearned praise",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It agrees with the comparison before understanding it (\"On that reading, yes\") and treats it as insightful (\"That comparison also sharpens Dillard's structure\").",
+     "question": "Does the response avoid praising or endorsing the McDonald’s comparison before understanding it?",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md, inputs/context.md, inputs/pasted-text.txt"
+    }
+   ]
+  },
+  {
+   "model": "Sonnet 5.5",
+   "task": "article-opening-feedback",
+   "score": 75,
+   "run_id": 1490,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1490",
+   "date": "24 Sep 2026",
+   "tokens": 52801,
+   "passed": 9,
+   "applicable": 12,
+   "verdicts": [
+    {
+     "check": "S02b. Interesting headline: replacement",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Offered option \"Spend First, Do the Token Math Later\" is the rubric's named-failing formulation (only says evaluation happens afterward), and \"How Many Tokens Are Too Few?\" promises a threshold the model itself says the piece never gives; the recommended \"Our CEO Wants You to Burn More Tokens\" also leans on reporting an internal directive.",
+     "question": "S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending impr",
+     "evidence": null
+    },
+    {
+     "check": "S07. Interesting setup immediately",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It explicitly recommends keeping the ambition implication last (\"'Whether the rest of us are being ambitious enough' is the payoff and should stay last\"), and its preferred opening states the stat, then a familiar rein-it-in reaction, delaying the ambition point to sentence 3; the lighter alternative leads with the familiar reaction outright.",
+     "question": "S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence? PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious",
+     "evidence": null
+    },
+    {
+     "check": "S08. CEO-specific cutback insight",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Never notes that Dan is the CEO so no one would ask him to cut back; both offered openings retain the invented default—\"Most people who top their company's usage leaderboard would think about reining it in / reining themselves in.\"",
+     "question": "S08. Does the AI’s feedback recognize and resolve the CEO-specific flaw in a default cutback setup? PASS if: The feedback recognizes that Dan is the CEO, so a generic claim that the highest spender would normally be asked or expected to cut back does not fit this case, and every usable offered repla",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    },
+    {
+     "check": "S02c. Headline makes sense on its own",
+     "scope": "this task",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Every headline offered as usable is self-contained for an AI-literate reader: \"Our CEO Wants You to Burn More Tokens\" names actor, action, and object; \"Spend First, Do the Token Math Later\" states a clear sequence; \"How Many Tokens Are Too Few?\" poses an understandable premise — while the opaque label \"Token Math\" is explicitly rejected as a hed.",
+     "question": "S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, acti",
+     "evidence": null
+    },
+    {
+     "check": "S01. On topic",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Treats \"Token Math\" as on-topic but a label (\"It's a label, not a claim... Keep the phrase, but use it in the body\"), and all replacements stay on token spending/ambitious experimentation.",
+     "question": "S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article? PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys o",
+     "evidence": null
+    },
+    {
+     "check": "S02a. Interesting headline: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Explicitly diagnoses the interest gap: \"It's a label, not a claim. It reads like a section slug and would be a weak email subject line,\" and notes the hook (top spender urging more spending) is absent from both heds.",
+     "question": "S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”? PASS if: The feedback recognizes that Token Math merely names the topic and",
+     "evidence": null
+    },
+    {
+     "check": "S03. Promise cashed out",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Repeatedly tests promise against payoff—\"It promises a threshold the piece never gives. The body offers a method (cost, what it bought, what you learned), not a number\"—and pairs its bold hed with a dek carrying the article's actual guardrail.",
+     "question": "S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard? PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promi",
+     "evidence": null
+    },
+    {
+     "check": "S04a. Headline and dek connect: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Says of the dek \"It's a question that repeats the hed's question form and adds no detail or implication\" and \"'ROI on experimentation' is abstract,\" i.e., the dek fails to develop the hed.",
+     "question": "S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on? PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but ",
+     "evidence": null
+    },
+    {
+     "check": "S04b. Headline and dek connect: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Proposes HED \"Our CEO Wants You to Burn More Tokens\" with DEK \"When an expensive AI experiment is worth it—and when you're just tokenmaxxing,\" where the dek adds the condition/guardrail that develops the hed's claim.",
+     "question": "S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it? PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the h",
+     "evidence": null
+    },
+    {
+     "check": "S05. Weasel words",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Flags \"three hedges in a row ('often,' 'if,' 'might')\" as generic and wasteful, and both replacement openings delete the empty lead-in while keeping meaningful hedges like \"consider\" and \"wondering.\"",
+     "question": "S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative? PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phras",
+     "evidence": null
+    },
+    {
+     "check": "S06. Diagnoses delayed hook",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Diagnoses the delay concretely: \"The stat is buried in sentence 3... the concrete, surprising fact, and it should land in the first sentence,\" and \"the current package buries\" the hook of the 3x top spender urging more.",
+     "question": "S06. Does the AI’s feedback diagnose that the opening delays its real point or hook? PASS if: The feedback identifies what the reader is made to wait for and why the lead-in is slow. It may notice that the first sentence’s condition-heavy setup postpones “reining yourself in” until the end, that a g",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Sonnet 5.5",
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 38,
+   "run_id": 1491,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1491",
+   "date": "24 Sep 2026",
+   "tokens": 269823,
+   "passed": 3,
+   "applicable": 8,
+   "verdicts": [
+    {
+     "check": "D01. First sentence answers the question",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both offered versions open with \"A personal benchmark is a test built from your own work,\" which restates 'benchmark' (test) and 'personal' (your own work) without naming AI/models or what the reader gets from it.",
+     "question": "D01. Does the first sentence answer what a personal benchmark is in plain, accurate terms? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked o",
+     "evidence": null
+    },
+    {
+     "check": "D03. Each sentence follows the previous one",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The 60-word version jumps from \"Your corrections become cases, each with yes-or-no checks\" straight to \"Public benchmarks are like SAT scores,\" skipping the step where models are actually run on those cases, and then asserts \"A personal benchmark is a reference check.\" with no bridge to the following sentence.",
+     "question": "D03. Does the paragraph develop its explanation in a coherent sequence, without missing connections between ideas? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.",
+     "evidence": null
+    },
+    {
+     "check": "D04. Analogy clicks without algebra",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both versions drop the second half of the analogy unmapped — \"A personal benchmark is a reference check instead\" (and the bare \"A personal benchmark is a reference check.\" in the short version) — never establishing the hiring frame or saying who gives the reference, so the reader must reconstruct the correspondence.",
+     "question": "D04. If the paragraph uses an analogy, does it clarify the concept immediately? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-pref",
+     "evidence": null
+    },
+    {
+     "check": "D05. Make personal standards concrete",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Neither version gives a single example of an actual standard; they stop at abstractions like \"the yes-or-no checks that capture what you were looking for\" and \"how often it clears your bar,\" with no sample check such as whether a headline makes the strongest claim.",
+     "question": "D05. Does the paragraph make a person's own standard concrete? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-preferred options. Ju",
+     "evidence": null
+    },
+    {
+     "check": "D07. Tests performance on your work",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both versions endorse the secondhand framing Dan rejected — \"A personal benchmark is a reference check instead\" — rather than presenting it as trying models on your own work like a work trial.",
+     "question": "D07. Does the paragraph frame a personal benchmark as a direct trial of a model on your work? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranke",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md"
+    },
+    {
+     "check": "D02. Explain the terms the reader needs",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Both versions explain the jargon at first use — \"that correction can become a case: the task, plus the yes-or-no checks that capture what you were looking for\" — so 'case' and 'checks' are defined inline rather than assumed.",
+     "question": "D02. Can a new reader understand the terms and references needed to follow the paragraph when they appear? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, incl",
+     "evidence": null
+    },
+    {
+     "check": "D06. Claims fit the supplied context",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Claims track the source material — \"yes-or-no\" checks and running multiple models on a task come from the Rick demo, and \"which model is best for your work, whoever makes it, and when a new one is worth switching to\" mirrors the draft's own KateBench bullet; the hedged \"can become a case\" does not assert automatic capture.",
+     "question": "D06. Do the paragraph's claims about how the product works fit the supplied context? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Sonnet 5.5",
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "run_id": 1493,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1493",
+   "date": "24 Sep 2026",
+   "tokens": 377844,
+   "passed": 4,
+   "applicable": 5,
+   "verdicts": [
+    {
+     "check": "R01. Revised first sentence answers the question",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The candidate paragraph's first sentence defines generic benchmarks with an unpacked metaphor — \"Public benchmarks are like SAT scores: they tell you roughly how capable a model is...\" — and only reaches the personal benchmark in the second and third sentences.",
+     "question": "R01. Does the revision replace the flagged abstract opening with a plain answer to 'What is a personal benchmark?' Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md, notion-inline-comment.txt"
+    },
+    {
+     "check": "R02. Explain checks before relying on them",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It explains checks in ordinary words as the person's own standards: \"grades each result with a few yes/no questions that capture your standards,\" followed by two sample questions.",
+     "question": "R02. Does the revised paragraph explain what a check or pass/fail standard means to a new reader? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore",
+     "evidence": null
+    },
+    {
+     "check": "R03. Show a concrete personal standard",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives concrete editorial standards — \"Does the headline make the strongest possible claim? Does the opening use concrete wording?\" — and ties them to comparison: \"Run it across models and you can see which one passes the most.\"",
+     "question": "R03. Does the revision illustrate the standards a person can set for comparing models? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore the model'",
+     "evidence": null
+    },
+    {
+     "check": "R04. Example stays at the definition level",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The example stays short (task plus two questions), does not walk through critiquing-and-checking mechanics, and returns to what the benchmark tells the person: \"which one passes the most, which may not be the one you've been using.\"",
+     "question": "R04. Does the example help define a personal benchmark without taking the reader into task mechanics? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ig",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Sonnet 5.5",
+   "task": "tend-feed-card-writing",
+   "score": 50,
+   "run_id": 1496,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1496",
+   "date": "24 Sep 2026",
+   "tokens": 3358763,
+   "passed": 3,
+   "applicable": 6,
+   "verdicts": [
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "fail",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "shared AI-tell phrases: its important to note",
+     "flagged_phrase": "its important to note",
+     "answer_file_public": true,
+     "phrase_in_answer_file": false
+    },
+    {
+     "check": "T04. Does the body develop the headline into a connected explanation?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The face never says the suppression rule enumerated counts, so the jump from a jargon ban to \"drop it everywhere\" and then to an unintroduced \"numbers rule\" scoring \"0 of 3\" leaves the reader to reconstruct how the fix, the priming effect, and the score relate.",
+     "question": "T04. Does the body develop the headline into a connected explanation? PASS if: The body develops the headline with a connected explanation. The reader can follow how the relevant actions, reasons, and results relate, and each sentence supplies the context needed for what follows. FAIL if: The body r",
+     "evidence": null
+    },
+    {
+     "check": "T05. Can the reader understand the concrete result without opening the sources?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The concrete result is never stated on the face — that planted timings dissolved into qualitative phrases in replies where nothing had failed — and it stands in an unexplained metric (\"scored worst, 0 of 3\", of what test or scale) plus the abstract quote \"primes the model to drop it everywhere\", so the reader must open the PR to learn what actually changed.",
+     "question": "T05. Can the reader understand the concrete result without opening the sources? PASS if: The visible card explains enough of the event or change and the consequence it describes for the intended reader to understand what happened. Any result, score, or unfamiliar category essential to that explanati",
+     "evidence": null
+    },
+    {
+     "check": "T01. Can the reader understand the headline on a first reading?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "\"Telling the agent not to relay error jargon made it drop numbers everywhere\" reads cleanly on first pass and names both kinds: what was suppressed (error jargon) and what was collaterally lost (numbers), with no compressed shorthand to decode.",
+     "question": "T01. Can the reader understand the headline on a first reading? PASS if: The headline presents a recognizable situation and a clear action, finding, or question in wording the reader can follow as written. The roles of any technical terms are apparent. FAIL if: The reader has to translate compressed",
+     "evidence": null
+    },
+    {
+     "check": "T02. Does the headline give the reader a specific reason to care?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The headline states a specific, surprising consequence — a narrow jargon ban spilling over into dropping numbers everywhere — so the reader sees the useful payoff (a prompt instruction's collateral information loss) without needing extra context.",
+     "question": "T02. Does the headline give the reader a specific reason to care? PASS if: The reader can see what useful or surprising thing they will learn, or what meaningful consequence is at stake. FAIL if: An effect is named, but the reader has to supply what information or useful function is at stake before ",
+     "evidence": null
+    },
+    {
+     "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "First body sentence lands a concrete incident (\"the agent pasting a provider's error, 'the taste lens threw a JSON parse error on its own output,' at a user who didn't follow it\") with only short attribution as setup; no stacked clauses or unplaceable references.",
+     "question": "T03. Does the opening get to its point without making the reader hold a long setup in mind? PASS if: The first sentence quickly establishes a concrete situation, action, or finding that helps the reader understand the card as it unfolds. Necessary context has a clear purpose. FAIL if: Process labels",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Sonnet 5.5",
+   "task": "literary-analysis-follow-up",
+   "score": 33,
+   "run_id": 1499,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1499",
+   "date": "24 Sep 2026",
+   "tokens": 189826,
+   "passed": 1,
+   "applicable": 3,
+   "verdicts": [
+    {
+     "check": "Ask what the user sees",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The response supplies an elaborate resemblance before any clarification — \"The analysis is the McDonald's part... Every paragraph is the same sandwich\" — with the \"Tell me which you meant\" question arriving only after the connection has been fully invented.",
+     "question": "Does the response ask the user to explain what they see in the McDonald’s comparison before supplying a connection?",
+     "evidence": null
+    },
+    {
+     "check": "No unearned praise",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It endorses the comparison's merit outright with \"You're right, and I can point to why,\" treating the unexplained association as a demonstrated insight.",
+     "question": "Does the response avoid praising or endorsing the McDonald’s comparison before understanding it?",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md, inputs/context.md, inputs/pasted-text.txt"
+    }
+   ]
+  },
+  {
+   "model": "Opus 5.5",
+   "task": "article-opening-feedback",
+   "score": 58,
+   "run_id": 819,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/819",
+   "date": "19 Sep 2026",
+   "tokens": 5915,
+   "passed": 7,
+   "applicable": 12,
+   "verdicts": [
+    {
+     "check": "S02b. Interesting headline: replacement",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The first-choice option 'Our CEO Thinks We're Not Spending Enough on AI' only reports an internal directive, much like the rubric's failing example, and 'Spend More Tokens. Then Show Your Work.' has a second clause that adds little specific to this article.",
+     "question": "S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending impr",
+     "evidence": null
+    },
+    {
+     "check": "S03. Promise cashed out",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The recommended headline 'Our CEO Thinks We're Not Spending Enough on AI' presents the draft as a workplace story about a CEO directive rather than a broader case for ambitious experiments.",
+     "question": "S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard? PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promi",
+     "evidence": null
+    },
+    {
+     "check": "S06. Diagnoses delayed hook",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It flags double hedging and says the paragraph 'builds up to its best fact' but never identifies that the first sentence's own point comes at its end, and its first replacement keeps the same 'top of their company's spending chart take it as a cue to cut back' setup.",
+     "question": "S06. Does the AI’s feedback notice that I only know the point of the first sentence—“reining yourself in”—at the very end? PASS if: The feedback specifically identifies the first sentence’s delayed point or condition-heavy setup and recommends getting to its point sooner or replacing that framing en",
+     "evidence": null
+    },
+    {
+     "check": "S07. Interesting setup immediately",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both replacement openings delay the ambition implication behind a familiar reaction ('take it as a cue to cut back' / 'Most people would see that as a reason to rein themselves in') instead of presenting it right away.",
+     "question": "S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence? PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious",
+     "evidence": null
+    },
+    {
+     "check": "S08. CEO-specific cutback insight",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both offered openings rely on the unsupported default that the top spender would cut back: 'take it as a cue to cut back' and 'Most people would see that as a reason to rein themselves in.'",
+     "question": "S08. Does the AI’s feedback avoid an ill-fitting default cutback reaction in every offered replacement opening for this CEO case? PASS if: Every usable offered opening avoids treating an imagined order or default expectation to cut back as the normal reaction to this CEO’s token spending. Dan: “usua",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    },
+    {
+     "check": "S02c. Headline makes sense on its own",
+     "scope": "this task",
+     "result": "pass",
+     "kind": "model",
+     "reason": "All three suggested headlines stand on their own: 'Our CEO Thinks We're Not Spending Enough on AI' states a clear claim, 'Spend More Tokens. Then Show Your Work.' is a clear pair of instructions, and 'What 4.5 Billion Tokens Bought Us' clearly names a spend and asks what it produced, so none needs the dek to fill in a missing meaning.",
+     "question": "S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, acti",
+     "evidence": null
+    },
+    {
+     "check": "S01. On topic",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The feedback treats 'Token Math' as an on-topic label and says the piece is about spending freely and then accounting for it, and its main replacements stay on token spending and ambitious experimentation.",
+     "question": "S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article? PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys o",
+     "evidence": null
+    },
+    {
+     "check": "S02a. Interesting headline: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says '\"Token Math\" is a label, not a claim' and identifies the surprising idea it misses: 'The CEO sits at the top of the spending chart and thinks everyone else is underspending.'",
+     "question": "S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”? PASS if: The feedback recognizes that Token Math merely names the topic and",
+     "evidence": null
+    },
+    {
+     "check": "S04a. Headline and dek connect: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says the dek 'is a second question stacked on the headline. It doesn't add a detail or an implication.'",
+     "question": "S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on? PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but ",
+     "evidence": null
+    },
+    {
+     "check": "S04b. Headline and dek connect: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It pairs 'Our CEO Thinks We're Not Spending Enough on AI' with 'Big token bills are fine—as long as you can say what they bought…', a dek that develops the headline with a condition and a mechanism.",
+     "question": "S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it? PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the h",
+     "evidence": null
+    },
+    {
+     "check": "S05. Weasel words",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says '\"Often if you are … you might think about…\" hedges twice', and the replacement openings drop that hedging.",
+     "question": "S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative? PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phras",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Opus 5.5",
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 25,
+   "run_id": 820,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/820",
+   "date": "19 Sep 2026",
+   "tokens": 5446,
+   "passed": 2,
+   "applicable": 8,
+   "verdicts": [
+    {
+     "check": "D01. First sentence answers the question",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both versions open with \"A personal benchmark is a test built from your own work\", which describes what the benchmark is made of but not what it does for the reader, and it never mentions AI or choosing a model.",
+     "question": "D01. Does the first sentence answer what a personal benchmark is in plain, accurate terms? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked o",
+     "evidence": null
+    },
+    {
+     "check": "D02. Explain the terms the reader needs",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Checks are explained with yes-or-no examples, but both versions end with \"that correction becomes a new case and a new check\" without ever explaining what a \"case\" is.",
+     "question": "D02. Can a new reader understand the terms and references needed to follow the paragraph when they appear? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, incl",
+     "evidence": null
+    },
+    {
+     "check": "D03. Each sentence follows the previous one",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "In the long version, \"A personal benchmark is a reference check.\" leads straight into \"And you don't have to build it by hand.\", leaving the analogy unexplained and changing subject abruptly.",
+     "question": "D03. Does the paragraph develop its explanation in a coherent sequence, without missing connections between ideas? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.",
+     "evidence": null
+    },
+    {
+     "check": "D04. Analogy clicks without algebra",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both versions say \"A personal benchmark is a reference check\" without showing how a reference check matches a personal benchmark, so the reader has to work out the comparison alone.",
+     "question": "D04. If the paragraph uses an analogy, does it clarify the concept immediately? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-pref",
+     "evidence": null
+    },
+    {
+     "check": "D06. Claims fit the supplied context",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The short version says \"it builds itself: every time you correct an AI, that correction becomes a new case and a new check,\" which presents a planned automatic capture as a current feature; the notes admit it is only the next step.",
+     "question": "D06. Do the paragraph's claims about how the product works fit the supplied context? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less",
+     "evidence": null
+    },
+    {
+     "check": "D07. Tests performance on your work",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Both versions present \"A personal benchmark is a reference check\" as the explanation, which is the secondhand-report framing rather than a work trial.",
+     "question": "D07. Does the paragraph frame a personal benchmark as a direct trial of a model on your work? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranke",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md"
+    },
+    {
+     "check": "D05. Make personal standards concrete",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Both versions give a concrete standard, \"Does the headline make the strongest possible claim?\", and say it shows which model does your work to your standard.",
+     "question": "D05. Does the paragraph make a person's own standard concrete? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-preferred options. Ju",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Opus 5.5",
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "run_id": 828,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/828",
+   "date": "19 Sep 2026",
+   "tokens": 242491,
+   "passed": 4,
+   "applicable": 5,
+   "verdicts": [
+    {
+     "check": "R04. Example stays at the definition level",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The example walks through the editing workflow the rubric warns against: \"hand a model an opening you've already edited, ask for feedback, and check its answer the way you would.\"",
+     "question": "R04. Does the example help define a personal benchmark without taking the reader into task mechanics? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ig",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md, notion-inline-comment.txt"
+    },
+    {
+     "check": "R01. Revised first sentence answers the question",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The draft file is unchanged, so this judges the ANSWER.md paragraph, which opens with a plain answer: \"A personal benchmark tells you which AI does your work the way you would.\"",
+     "question": "R01. Does the revision replace the flagged abstract opening with a plain answer to 'What is a personal benchmark?' Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ",
+     "evidence": null
+    },
+    {
+     "check": "R02. Explain checks before relying on them",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The paragraph drops the term \"checks\" and explains the standards in plain words as \"the questions you ask when you judge that work,\" then gives examples of those yes/no questions.",
+     "question": "R02. Does the revised paragraph explain what a check or pass/fail standard means to a new reader? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore",
+     "evidence": null
+    },
+    {
+     "check": "R03. Show a concrete personal standard",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives real editorial standards (\"Did it push the headline toward the strongest claim? Did it swap vague wording for concrete wording?\") and says to \"Run that test on every model and you'll see which one edits like you.\"",
+     "question": "R03. Does the revision illustrate the standards a person can set for comparing models? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore the model'",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Opus 5.5",
+   "task": "tend-feed-card-writing",
+   "score": 67,
+   "run_id": 991,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/991",
+   "date": "20 Sep 2026",
+   "tokens": null,
+   "passed": 4,
+   "applicable": 6,
+   "verdicts": [
+    {
+     "check": "T01. Can the reader understand the headline on a first reading?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "This is an information-loss story, and neither side is recognizable: \"internal counts\" does not say what was being counted or why it was suppressed, and \"numbers everywhere\" is a bare category that leaves the reader to guess what output was lost. Evidence: “internal counts”; “drop numbers everywhere”",
+     "question": "T01. Can the reader understand the headline on a first reading? PASS if: The headline presents a recognizable situation and a clear action, finding, or question in wording the reader can follow as written. The roles of any technical terms are apparent. FAIL if: The reader has to translate compressed",
+     "evidence": null
+    },
+    {
+     "check": "T02. Does the headline give the reader a specific reason to care?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The stated consequence is an unspecified overreach, so the reader has to supply what useful figures went missing before any stake appears, leaving only the generic lesson that an instruction had side effects. Evidence: “made it drop numbers everywhere”",
+     "question": "T02. Does the headline give the reader a specific reason to care? PASS if: The reader can see what useful or surprising thing they will learn, or what meaningful consequence is at stake. FAIL if: An effect is named, but the reader has to supply what information or useful function is at stake before ",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected answer.md"
+    },
+    {
+     "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The first sentence names who did what and the specific problem being addressed, with an example that makes the issue immediately concrete rather than deferring the point behind setup. Evidence: “Engineer A's open Plus One prompt PR tried to stop replies from pasting a provider's internal tallies”",
+     "question": "T03. Does the opening get to its point without making the reader hold a long setup in mind? PASS if: The first sentence quickly establishes a concrete situation, action, or finding that helps the reader understand the card as it unfolds. Necessary context has a clear purpose. FAIL if: Process labels",
+     "evidence": null
+    },
+    {
+     "check": "T04. Does the body develop the headline into a connected explanation?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The body traces the headline's claim through the attempted fixes, the side effect on unrelated replies, the comparative scores, and the current approach, so the relationship between action and result is followable. Evidence: “Every wording that named counts as something to withhold also made the Agent blur planted timings in unrelated replies”; “The current head deletes that vocabulary and bans only opaque debugging strings; its score is pending.”",
+     "question": "T04. Does the body develop the headline into a connected explanation? PASS if: The body develops the headline with a connected explanation. The reader can follow how the relevant actions, reasons, and results relate, and each sentence supplies the context needed for what follows. FAIL if: The body r",
+     "evidence": null
+    },
+    {
+     "check": "T05. Can the reader understand the concrete result without opening the sources?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The scores are anchored to a stated baseline and to the behavior they measure, so the reader can see that the withholding wording suppressed numbers that should have been reported and that the newer approach is untested. Evidence: “1/3 twice, against 3/3 on main”; “Adding “never overrides the numbers rule” scored worst, 0/3.”",
+     "question": "T05. Can the reader understand the concrete result without opening the sources? PASS if: The visible card explains enough of the event or change and the consequence it describes for the intended reader to understand what happened. Any result, score, or unfamiliar category essential to that explanati",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "Opus 5.5",
+   "task": "literary-analysis-follow-up",
+   "score": 33,
+   "run_id": 1058,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1058",
+   "date": "21 Sep 2026",
+   "tokens": 2376,
+   "passed": 1,
+   "applicable": 3,
+   "verdicts": [
+    {
+     "check": "Ask what the user sees",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "Although it opens with \"Say more,\" the response supplies specific resemblances before the user explains, such as \"It's a 'billions served' problem\" and the claim that the essay \"is built from interchangeable units.\"",
+     "question": "Does the response ask the user to explain what they see in the McDonald’s comparison before supplying a connection?",
+     "evidence": null
+    },
+    {
+     "check": "No unearned praise",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It endorses the comparison's merit before understanding it, saying \"that's more interesting, and I think there's something there\" and conceding \"fair\" to its own reading of the user's meaning.",
+     "question": "Does the response avoid praising or endorsing the McDonald’s comparison before understanding it?",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    }
+   ]
+  },
+  {
+   "model": "GPT-5.6",
+   "task": "article-opening-feedback",
+   "score": 67,
+   "run_id": 1182,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1182",
+   "date": "21 Sep 2026",
+   "tokens": 49581,
+   "passed": 8,
+   "applicable": 12,
+   "verdicts": [
+    {
+     "check": "S02b. Interesting headline: replacement",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The recommended headline 'Spend First. Do the Token Math Later.' is essentially the rubric's failing example 'Spend the Tokens, Then Do the Math': it only says evaluation comes later and tells the reader nothing specific.",
+     "question": "S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending impr",
+     "evidence": null
+    },
+    {
+     "check": "S04a. Headline and dek connect: diagnosis",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It critiques 'Token Math' and 'What's the ROI on experimentation?' separately and never says the dek fails to develop the headline or that their connection is unclear.",
+     "question": "S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on? PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but ",
+     "evidence": null
+    },
+    {
+     "check": "S05. Weasel words",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The suggested opening states the statistic, then delays the ambition implication behind a familiar reaction: 'His reaction isn't to rein himself in. It's to wonder whether the rest of the team is experimenting ambitiously enough.'",
+     "question": "S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative? PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phras",
+     "evidence": null
+    },
+    {
+     "check": "S06. Diagnoses delayed hook",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The offered opening still hooks on the cutback contrast, 'His reaction isn't to rein himself in,' which implies an unsupported default expectation to cut back for the CEO.",
+     "question": "S06. Does the AI’s feedback notice that I only know the point of the first sentence—“reining yourself in”—at the very end? PASS if: The feedback specifically identifies the first sentence’s delayed point or condition-heavy setup and recommends getting to its point sooner or replacing that framing en",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    },
+    {
+     "check": "S02c. Headline makes sense on its own",
+     "scope": "this task",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Both headlines make sense without the dek. In \"Spend First. Do the Token Math Later.\", the words \"token math\" show that the spending is on AI tokens and that the cost check comes afterward. \"You're Not Spending Enough on AI\" is a plain, clear claim.",
+     "question": "S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, acti",
+     "evidence": null
+    },
+    {
+     "check": "S01. On topic",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The feedback treats 'Token Math' as on topic but too broad, and its replacements ('Spend First. Do the Token Math Later.', 'You're Not Spending Enough on AI') stay on ambitious token spending and experimentation.",
+     "question": "S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article? PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys o",
+     "evidence": null
+    },
+    {
+     "check": "S02a. Interesting headline: diagnosis",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says 'Token Math' 'names the topic without expressing the surprising claim' and could describe 'a pricing explainer, a usage calculator, or a cost-control piece.'",
+     "question": "S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”? PASS if: The feedback recognizes that Token Math merely names the topic and",
+     "evidence": null
+    },
+    {
+     "check": "S03. Promise cashed out",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It weighs promise against payoff, noting that 'How Many Tokens are Too Many?' implies a threshold the story doesn't establish and that the alt dek 'promises criteria, while the draft offers a philosophy and examples'; its replacement pairs promise supported payoffs.",
+     "question": "S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard? PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promi",
+     "evidence": null
+    },
+    {
+     "check": "S04b. Headline and dek connect: replacement",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The pair 'You're Not Spending Enough on AI' / 'Every's top token user consumes more than three times as many tokens as the runner-up—and thinks the bigger risk is experimenting too little' has a dek that clearly develops the headline with evidence and a stake.",
+     "question": "S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it? PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the h",
+     "evidence": null
+    },
+    {
+     "check": "S07. Interesting setup immediately",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It flags 'Often,' 'if,' 'might think,' and 'about' as hesitant hedges, and its replacement opening removes them.",
+     "question": "S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence? PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious",
+     "evidence": null
+    },
+    {
+     "check": "S08. CEO-specific cutback insight",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It says the first sentence 'stack[s] qualifications before the reader reaches the point' and recommends starting with the three-times figure instead.",
+     "question": "S08. Does the AI’s feedback avoid an ill-fitting default cutback reaction in every offered replacement opening for this CEO case? PASS if: Every usable offered opening avoids treating an imagined order or default expectation to cut back as the normal reaction to this CEO’s token spending. Dan: “usua",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-5.6",
+   "task": "personal-benchmark-paragraph-first-draft",
+   "score": 25,
+   "run_id": 1185,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1185",
+   "date": "21 Sep 2026",
+   "tokens": 120309,
+   "passed": 2,
+   "applicable": 8,
+   "verdicts": [
+    {
+     "check": "D01. First sentence answers the question",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The ANSWER.md paragraph opens with \"A personal benchmark is a reference check for AI.\" This analogy has to be decoded and does not say what the reader gets from a personal benchmark.",
+     "question": "D01. Does the first sentence answer what a personal benchmark is in plain, accurate terms? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked o",
+     "evidence": null
+    },
+    {
+     "check": "D02. Explain the terms the reader needs",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The paragraph says models are scored \"against checks drawn from your own judgment and corrections\" but never explains what a \"check\" is.",
+     "question": "D02. Can a new reader understand the terms and references needed to follow the paragraph when they appear? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, incl",
+     "evidence": null
+    },
+    {
+     "check": "D03. Each sentence follows the previous one",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The opening \"reference check\" framing is dropped: the next sentence switches to \"tests them on work you've actually done\" without linking the two, so the reader has to supply the missing connection.",
+     "question": "D03. Does the paragraph develop its explanation in a coherent sequence, without missing connections between ideas? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.",
+     "evidence": null
+    },
+    {
+     "check": "D04. Analogy clicks without algebra",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It leads with the compressed line \"a reference check for AI\" and never says what corresponds to what, which is the failure pattern the rubric names.",
+     "question": "D04. If the paragraph uses an analogy, does it clarify the concept immediately? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-pref",
+     "evidence": null
+    },
+    {
+     "check": "D05. Make personal standards concrete",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It mentions \"your own judgment and corrections\" and \"what 'good' means to you\" but gives no example of an actual standard, such as a headline being interesting or following AP style.",
+     "question": "D05. Does the paragraph make a person's own standard concrete? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less-preferred options. Ju",
+     "evidence": null
+    },
+    {
+     "check": "D07. Tests performance on your work",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It presents a personal benchmark as \"a reference check for AI,\" which endorses the secondhand-report framing that Dan rejected in favor of a work trial, even though the paragraph also mentions testing on your work.",
+     "question": "D07. Does the paragraph frame a personal benchmark as a direct trial of a model on your work? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranke",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md"
+    },
+    {
+     "check": "D06. Claims fit the supplied context",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "Testing models on your real work, drawing checks from your corrections, and showing which model is best all match the draft's KateBench description (\"built from your real work and corrections… should show you the best model for you\"), and nothing contradicts the source.",
+     "question": "D06. Do the paragraph's claims about how the product works fit the supplied context? Evaluate every paragraph offered as usable copy: the Personal benchmarks paragraph in the working notion-strategy-draft.md if edited, and all proposed drafts and alternatives in ANSWER.md, including unranked or less",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-5.6",
+   "task": "personal-benchmark-paragraph-revision",
+   "score": 80,
+   "run_id": 1187,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1187",
+   "date": "21 Sep 2026",
+   "tokens": 104865,
+   "passed": 4,
+   "applicable": 5,
+   "verdicts": [
+    {
+     "check": "R04. Example stays at the definition level",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The example walks through the critique workflow (\"giving feedback on an article opening\" goes to several models, then each critique is graded on \"Did it catch that the headline buried the strongest claim?\"), which is the task mechanics the rubric's FAIL condition names.",
+     "question": "R04. Does the example help define a personal benchmark without taking the reader into task mechanics? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ig",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected rick-every-checks-demo-transcript.md, strategy-reading-notes.md, earlier-benchmark-phrasing-chat.json, notion-editorial-review-before-paragraph.md, ANSWER.md, notion-strategy-draft.md, notion-inline-comment.txt"
+    },
+    {
+     "check": "R01. Revised first sentence answers the question",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The first sentence of ANSWER.md is a plain answer about the reader's own work: \"A personal benchmark tells you which AI model is best for the work you actually do.\"",
+     "question": "R01. Does the revision replace the flagged abstract opening with a plain answer to 'What is a personal benchmark?' Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ",
+     "evidence": null
+    },
+    {
+     "check": "R02. Explain checks before relying on them",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It never leans on the undefined word 'checks'; it says the benchmark \"scores their answers against your standards\" and then gives those standards as yes/no questions (\"Did it catch...?\"), which makes clear the reader sets them.",
+     "question": "R02. Does the revised paragraph explain what a check or pass/fail standard means to a new reader? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore",
+     "evidence": null
+    },
+    {
+     "check": "R03. Show a concrete personal standard",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "It gives recognizable editorial standards (\"Did it catch that the headline buried the strongest claim? Did it replace vague language with concrete wording?\") and shows that several models are scored against them.",
+     "question": "R03. Does the revision illustrate the standards a person can set for comparing models? Evaluate the candidate strategy paragraph: use the Personal benchmarks paragraph in the working notion-strategy-draft.md if the model edited it; otherwise use the proposed paragraph in ANSWER.md. Ignore the model'",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-5.6",
+   "task": "tend-feed-card-writing",
+   "score": 50,
+   "run_id": 1191,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1191",
+   "date": "21 Sep 2026",
+   "tokens": 2647092,
+   "passed": 3,
+   "applicable": 6,
+   "verdicts": [
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "fail",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "shared AI-tell phrases: its important to note",
+     "flagged_phrase": "its important to note",
+     "answer_file_public": true,
+     "phrase_in_answer_file": false
+    },
+    {
+     "check": "T02. Does the headline give the reader a specific reason to care?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The headline says only \"other numbers\" and does not say what useful information was lost; the face later says it was timing details, so the reader must supply the payoff.",
+     "question": "T02. Does the headline give the reader a specific reason to care? PASS if: The reader can see what useful or surprising thing they will learn, or what meaningful consequence is at stake. FAIL if: An effect is named, but the reader has to supply what information or useful function is at stake before ",
+     "evidence": null
+    },
+    {
+     "check": "T05. Can the reader understand the concrete result without opening the sources?",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "\"main scored 3/3; variants scored 1/3, 0/3, and 1/3\" and \"Even 'never overrides the numbers rule' did worst\" do not explain what the scores measure, what \"main\" is, or what the numbers rule is, so the reader must open the PR to understand the comparison.",
+     "question": "T05. Can the reader understand the concrete result without opening the sources? PASS if: The visible card explains enough of the event or change and the consequence it describes for the intended reader to understand what happened. Any result, score, or unfamiliar category essential to that explanati",
+     "evidence": null
+    },
+    {
+     "check": "T01. Can the reader understand the headline on a first reading?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The headline \"Engineer A found that banning internal counts made the Agent drop other numbers\" gives a clear situation: a ban on one thing removed something else, and both the targeted and lost categories can be recognized.",
+     "question": "T01. Can the reader understand the headline on a first reading? PASS if: The headline presents a recognizable situation and a clear action, finding, or question in wording the reader can follow as written. The roles of any technical terms are apparent. FAIL if: The reader has to translate compressed",
+     "evidence": null
+    },
+    {
+     "check": "T03. Does the opening get to its point without making the reader hold a long setup in mind?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The first sentence of the face, \"Engineer A tried four ways to stop provider diagnostics from leaking into replies,\" sets up a concrete situation right away.",
+     "question": "T03. Does the opening get to its point without making the reader hold a long setup in mind? PASS if: The first sentence quickly establishes a concrete situation, action, or finding that helps the reader understand the card as it unfolds. Necessary context has a clear purpose. FAIL if: Process labels",
+     "evidence": null
+    },
+    {
+     "check": "T04. Does the body develop the headline into a connected explanation?",
+     "scope": "this case",
+     "result": "pass",
+     "kind": "model",
+     "reason": "The face moves in a connected line from the attempted fix, to the side effect of dropped timing details, to the scores, to the takeaway of banning opaque artifacts instead of broad classes.",
+     "question": "T04. Does the body develop the headline into a connected explanation? PASS if: The body develops the headline with a connected explanation. The reader can follow how the relevant actions, reasons, and results relate, and each sentence supplies the context needed for what follows. FAIL if: The body r",
+     "evidence": "judged by Claude"
+    }
+   ]
+  },
+  {
+   "model": "GPT-5.6",
+   "task": "literary-analysis-follow-up",
+   "score": 33,
+   "run_id": 1132,
+   "url": "https://checks.every.to/p/dans-editorial-checks/runs/1132",
+   "date": "21 Sep 2026",
+   "tokens": 18615,
+   "passed": 1,
+   "applicable": 3,
+   "verdicts": [
+    {
+     "check": "Ask what the user sees",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "The response supplies specific resemblances before asking, e.g., \"It makes Catholicism sound almost like McDonald’s: a gigantic global system...\" and \"Dillard builds the essay almost like a Big Mac,\" only then asking \"Is that the resemblance you mean, or something else?\"",
+     "question": "Does the response ask the user to explain what they see in the McDonald’s comparison before supplying a connection?",
+     "evidence": null
+    },
+    {
+     "check": "No unearned praise",
+     "scope": "this case",
+     "result": "fail",
+     "kind": "model",
+     "reason": "It opens with \"Ha—yes, especially...\", which agrees with the comparison and treats it as fitting before it understands what the user meant.",
+     "question": "Does the response avoid praising or endorsing the McDonald’s comparison before understanding it?",
+     "evidence": null
+    },
+    {
+     "check": "ai-wording",
+     "scope": "every task",
+     "result": "pass",
+     "kind": "code",
+     "reason": null,
+     "question": "deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.",
+     "evidence": "inspected ANSWER.md"
+    }
+   ]
+  }
+ ]
+}

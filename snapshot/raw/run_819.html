@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>article-opening-feedback · Opus 5.5 · Dan’s Editorial Checks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="m9zX0zXYdYS-vfR0YRh6NpuxrBMnX2ruBtDaB8MzKd-4POr2-oqn_0nPhlVa6UhiOrM2bIeusJmwPLw3O6AAWw" />
+    
+    <link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,401,500,501,600,601,700,701&f[]=switzer@400,401,500,501,600,601&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/application-8b441ae0.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="/assets/tailwind-f8744f55.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-bfcdf840.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-9fd88cd5.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/clamp_controller": "/assets/controllers/clamp_controller-e3997492.js",
+    "controllers/copy_controller": "/assets/controllers/copy_controller-d80b422c.js",
+    "controllers/editor_controller": "/assets/controllers/editor_controller-7cf4ce1a.js",
+    "controllers/files_controller": "/assets/controllers/files_controller-b1a8d031.js",
+    "controllers/filter_controller": "/assets/controllers/filter_controller-ec18dd7f.js",
+    "controllers/fold_controller": "/assets/controllers/fold_controller-900fe9a9.js",
+    "controllers": "/assets/controllers/index-ee64e1f1.js",
+    "controllers/mint_controller": "/assets/controllers/mint_controller-b655a8fe.js",
+    "controllers/picks_controller": "/assets/controllers/picks_controller-5e274f07.js",
+    "controllers/poll_controller": "/assets/controllers/poll_controller-e31fd800.js",
+    "controllers/rows_controller": "/assets/controllers/rows_controller-95242814.js",
+    "controllers/scroll_current_controller": "/assets/controllers/scroll_current_controller-c26a97b4.js",
+    "controllers/scroll_hint_controller": "/assets/controllers/scroll_hint_controller-868cbce4.js",
+    "controllers/shell_controller": "/assets/controllers/shell_controller-75f366f8.js",
+    "controllers/tabs_controller": "/assets/controllers/tabs_controller-3dfde441.js",
+    "controllers/toast_controller": "/assets/controllers/toast_controller-0dcb36a5.js",
+    "controllers/toggle_controller": "/assets/controllers/toggle_controller-440477d7.js",
+    "controllers/tooltip_controller": "/assets/controllers/tooltip_controller-b72acfa5.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-bfcdf840.js">
+<link rel="modulepreload" href="/assets/turbo.min-9fd88cd5.js">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="/assets/controllers/clamp_controller-e3997492.js">
+<link rel="modulepreload" href="/assets/controllers/copy_controller-d80b422c.js">
+<link rel="modulepreload" href="/assets/controllers/editor_controller-7cf4ce1a.js">
+<link rel="modulepreload" href="/assets/controllers/files_controller-b1a8d031.js">
+<link rel="modulepreload" href="/assets/controllers/filter_controller-ec18dd7f.js">
+<link rel="modulepreload" href="/assets/controllers/fold_controller-900fe9a9.js">
+<link rel="modulepreload" href="/assets/controllers/index-ee64e1f1.js">
+<link rel="modulepreload" href="/assets/controllers/mint_controller-b655a8fe.js">
+<link rel="modulepreload" href="/assets/controllers/picks_controller-5e274f07.js">
+<link rel="modulepreload" href="/assets/controllers/poll_controller-e31fd800.js">
+<link rel="modulepreload" href="/assets/controllers/rows_controller-95242814.js">
+<link rel="modulepreload" href="/assets/controllers/scroll_current_controller-c26a97b4.js">
+<link rel="modulepreload" href="/assets/controllers/scroll_hint_controller-868cbce4.js">
+<link rel="modulepreload" href="/assets/controllers/shell_controller-75f366f8.js">
+<link rel="modulepreload" href="/assets/controllers/tabs_controller-3dfde441.js">
+<link rel="modulepreload" href="/assets/controllers/toast_controller-0dcb36a5.js">
+<link rel="modulepreload" href="/assets/controllers/toggle_controller-440477d7.js">
+<link rel="modulepreload" href="/assets/controllers/tooltip_controller-b72acfa5.js">
+<script type="module">import "application"</script>
+      <meta name="posthog-tracking" content="enabled" data-turbo-track="reload">
+    <link rel="preconnect" href="https://pha.every.to" crossorigin>
+    <script data-turbo-eval="false">
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="vu fu pu gu bu init Hu zu qu ju Gu Xa Bu Qu Du eh ih nh sh rh oh capture getExtension Uu cu hh calculateEventProperties uh register register_once register_for_session unregister unregister_for_session gh Nu dh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset yh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fh Xu createPersonProfile setInternalOrTestUser ph wu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ju debug Ya Os getPageViewId captureTraceFeedback captureTraceMetric Ru".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_nVX3GaY5rdpJDJTwooVi5AcDmhFaDVujKc6GLJNp67Vq', {
+        api_host: 'https://pha.every.to',
+        ui_host: 'https://us.posthog.com',
+        defaults: '2026-05-30',
+        capture_pageview: 'history_change',
+        person_profiles: 'identified_only',
+      });
+    </script>
+
+  </head>
+  <body class="min-h-screen flex flex-col" data-controller="shell" >
+    <a href="#main" class="skip" data-turbo="false">Skip to the page</a>
+
+    
+    <header class="topbar">
+      <div class="h-full px-3 md:px-5 flex items-center gap-3">
+        <a class="brand min-w-0" href="/p/dans-editorial-checks"><span class="mark"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="4" width="2" height="8" rx=".6" class="p"/><rect x="5.4" y="4" width="2" height="8" rx=".6" class="p"/><rect x="8.6" y="4" width="2" height="8" rx=".6" class="f"/><rect x="11.8" y="4" width="2" height="8" rx=".6" class="p"/></svg></span>
+<span class="truncate">Dan’s Editorial Checks</span></a>
+          <nav class="benchnav" aria-label="Benchmark">
+  <a href="/p/dans-editorial-checks">Scoreboard</a>
+    <details class="dropdown" data-shot="tasks-menu">
+      <summary aria-current="true" title="Tasks">
+        <span class="truncate">article-opening-feedback</span><svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+</summary>      <div class="menu left">
+          <a class="menu-item text-[13.5px]" title="Article opening feedback" aria-current="page" href="/p/dans-editorial-checks/tasks/01-article-opening-feedback"><span class="truncate">article-opening-feedback</span></a>
+          <a class="menu-item text-[13.5px]" title="Personal benchmark paragraph — first draft" href="/p/dans-editorial-checks/tasks/02-personal-benchmark-paragraph-first-draft"><span class="truncate">personal-benchmark-paragraph-first-draft</span></a>
+          <a class="menu-item text-[13.5px]" title="Personal benchmark paragraph — revision" href="/p/dans-editorial-checks/tasks/03-personal-benchmark-paragraph-revision"><span class="truncate">personal-benchmark-paragraph-revision</span></a>
+          <a class="menu-item text-[13.5px]" title="Tend feed-card writing" href="/p/dans-editorial-checks/tasks/04-tend-feed-card-writing"><span class="truncate">tend-feed-card-writing</span></a>
+          <a class="menu-item text-[13.5px]" title="Literary analysis follow-up" href="/p/dans-editorial-checks/tasks/07-literary-analysis-follow-up"><span class="truncate">literary-analysis-follow-up</span></a>
+      </div>
+    </details>
+  <details class="dropdown" data-shot="models-menu">
+  <summary aria-current="true" title="Models">
+    <span class="truncate">Opus 5.5</span><svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+</summary>  <div class="menu left">
+      <a class="menu-item text-[13.5px]" title="GPT-6.1 Sol" href="/p/dans-editorial-checks/GPT-6.1%20Sol"><span class="truncate">GPT-6.1 Sol</span></a>
+      <a class="menu-item text-[13.5px]" title="GPT-6 Sol" href="/p/dans-editorial-checks/GPT-6%20Sol"><span class="truncate">GPT-6 Sol</span></a>
+      <a class="menu-item text-[13.5px]" title="Sonnet 5.5" href="/p/dans-editorial-checks/Sonnet%205.5"><span class="truncate">Sonnet 5.5</span></a>
+      <a class="menu-item text-[13.5px]" title="Opus 5.5" aria-current="page" href="/p/dans-editorial-checks/Opus%205.5"><span class="truncate">Opus 5.5</span></a>
+      <a class="menu-item text-[13.5px]" title="GPT-5.6" href="/p/dans-editorial-checks/GPT-5.6"><span class="truncate">GPT-5.6</span></a>
+  </div>
+</details>
+
+</nav>
+
+        <div class="ml-auto flex items-center gap-3 shrink-0">
+          
+          <span class="every-lockup small ">
+  <a class="every-wordmark-link" aria-label="Every" href="https://every.to/"><span class="every-wordmark"></span></a>
+    <span class="every-lockup-slash" aria-hidden="true">/</span>
+    <span class="every-lockup-name">Checks</span>
+</span>
+
+        </div>
+      </div>
+    </header>
+    
+    <main id="main" tabindex="-1" class="content flex-1">   
+<div class="run" data-controller="fold" data-fold-cookie-value="run_checks_prose">
+  <div class="run-head">
+    <div class="told">
+      <h1 class="page-title"><a title="Every model on this task" href="/p/dans-editorial-checks/tasks/01-article-opening-feedback">article-opening-feedback</a></h1>
+      <p class="facts"><a href="/p/dans-editorial-checks/Opus%205.5">Opus 5.5</a><span>Claude Code</span><span>high effort</span><span>run 19 Sep 2026</span><span>5,915 tokens</span></p>
+    </div>
+    <div class="acts"><details class="given" name="given" data-opens="instructions"><summary class="btn" aria-controls="instructions">Instructions <span class="mono text-[10px]">▾</span></summary></details></div>
+  </div>
+  <section class="well" id="instructions">
+  <h2>Instructions <span class="hint">— what the model was asked</span></h2>
+  <div class="prose prose-sm"><h2 id="article-opening-feedback-token-math">Article opening feedback: Token Math<a href="#article-opening-feedback-token-math" aria-label="Link to heading 'Article opening feedback: Token Math'" data-heading-content="Article opening feedback: Token Math" class="anchor"></a></h2>
+<p>Review the headline, deck, and opening paragraph for readers of Every, an AI-focused publication. Identify the strongest idea, assess the framing and wording, and give concise editorial feedback with suggested replacement copy where useful. Use the rest of the draft as context. Preserve the factual qualifications.<br />
+Use Every’s house style: headlines should express the most interesting or surprising claim in concise, punchy language that mostly fits an email subject line. Let the dek develop the headline with a clear implication or detail. Headlines can be bold, with qualifications developed in the body. The first sentence should be strong and catchy, and continue naturally from the hed/dek. Any problems you find you should explain and offer alternatives.<br />
+The draft is frozen below. This case is for editorial feedback; it does not ask for a whole-article rewrite.</p>
+<h3 id="headline-selection-captured-in-the-source">Headline selection captured in the source<a href="#headline-selection-captured-in-the-source" aria-label="Link to heading 'Headline selection captured in the source'" data-heading-content="Headline selection captured in the source" class="anchor"></a></h3>
+<p>HED: Token Math<br />
+Alt Hed: How Many Tokens are Too Many?</p>
+<p>DEK: What’s the ROI on experimentation?<br />
+Alt DEK: When expensive experimentation is worth it and when to rein your tokenmaxxing in.</p>
+<h3 id="opening-paragraph">Opening paragraph<a href="#opening-paragraph" aria-label="Link to heading 'Opening paragraph'" data-heading-content="Opening paragraph" class="anchor"></a></h3>
+<p>Often if you are the highest spender at your company you might think about reining yourself in. But when it comes to tokens, Every CEO Dan Shipper thinks everyone else should consider ramping up. He consumes more than three times as many tokens as the next-highest user at the company. The size of the gap has him wondering whether the rest of us are being ambitious enough with AI.</p>
+<h3 id="full-draft-without-comments">Full draft without comments<a href="#full-draft-without-comments" aria-label="Link to heading 'Full draft without comments'" data-heading-content="Full draft without comments" class="anchor"></a></h3>
+<p>HED: Token Math<br />
+DEK: What’s the ROI on experimentation?</p>
+<p>Often if you are the highest spender at your company you might think about reining yourself in. But when it comes to tokens, Every CEO Dan Shipper thinks everyone else should consider ramping up. He consumes more than three times as many tokens as the next-highest user at the company. The size of the gap has him wondering whether the rest of us are being ambitious enough with AI.</p>
+<p>Every’s OpenAI token leaderboard (Screenshot courtesy of Laura Entis.)</p>
+<p>The goal isn't tokenmaxxing, or the practice of torching tokens for sport. Instead, he wants to give people room to experiment with radical new strategies and ways of working that, should they pan out, could vastly improve their productivity and more than justify the token costs.</p>
+<p>In a conversation with head of platform Willie Williams,  the two settled on a tangible starting point: use AI to attack the engineering team’s bottlenecks, see how far they get, and only then do the token math.</p>
+<p>Inside Every</p>
+<p>Token budgets at the frontier</p>
+<p>Dan’s encouragement to experiment comes with an expectation: When people spend company money, they should assess what that spending produced and whether they could be more efficient next time.</p>
+<p>Turning that philosophy into spending decisions falls to head of operations Arielle Shipper. For now, she evaluates expensive runs case by case, using the results to decide when to keep funding the work and when to change course.</p>
+<p>Her early-warning system is the company card. She keeps the ChatGPT automatic credit refill relatively low, so an unusually rapid succession of charges tells her that someone is building or testing something big.</p>
+<p>When she’s alerted to changes over the set amount Arielle typically asks the team on Slack if anyone is in the middle of a particularly big run or check the usage leaderboard and message the people at the top. “Then Dan always responds, ‘It’s me running Ultra.’” she says, which explains why he’s always on the top of the leaderboard.</p>
+<p>A common occurrence. (Screenshot courtesy of Laura Entis.)</p>
+<p>She wants answers to three questions: What did the run cost? What did it buy us? And what did we learn?</p>
+<p>The team has started offering these retrospectives unprompted. After a string of Astra experiments racked up billions of tokens, head of video Randy Counsman messaged her detailing what had worked, what hadn’t, and what he’d learned—which, it turns out, was a lot.</p>
+<p>More on that below.</p>
+<p>Data point</p>
+<p>4.5 billion</p>
+<p>That’s how many OpenAI tokens Randy burned through in an attempt to make a 3D model of his face with Astra.</p>
+<p>The project started innocently enough: Inspired by social media posts of impressive-looking AI-generated demos made with Blender, a free 3D tool, he wanted to try it himself. Experimenting with AI, after all, is an important component of his job.</p>
+<p>Using strategies shared on X, he set up an orchestrator agent to maintain the plan, an implementer to assign tasks, and subagents to execute them, and instructed Codex to keep looping through improvements until the model was “implemented very well,” Randy says. In retrospect, “It was an ambiguous goal.”</p>
+<p>Then he let the model run. And run. And run.</p>
+<p>By the time he pressed pause on the project, the token spend was in the billions and the result was, as he puts it, “very janky.”</p>
+<p>The output, rendered in four different shaders. (Image courtesy of Randy Counsman.)</p>
+<p>An AI audit of his Codex sessions revealed some glaring inefficiencies: Layers of agents passed growing amounts of context back and forth, including messages checking whether a subagent had completed a task. He’d unwittingly created a compute-hungry “unruly swarm” of agents.</p>
+<p>Randy has since rebuilt his project setup. He dropped the implementer, caped the orchestrator at five Sol subagents to control costs, and built in explicit feedback checkpoints. For a recent project, he also generated an image of the design he wanted, so a judge agent could check the model's work against a concrete target instead of an open-ended instruction to keep improving.</p>
+<p>A failed experiment is still a good investment if it shows where an AI system falls short. Randy now has a benchmark to run new models against—how well they turn an organic 2D image into an organic 3D model—and a leaner setup to get a better result with fewer tokens.</p>
+<p>Unwittingly large token spends via experimentation is an Every rite of passage. (Screenshot courtesy of Laura Entis.)<br />
+Try it yourself: Pick an AI task that burned through more tokens than expected and paste the following into your agent of choice:<br />
+Review the available session history and token usage records for [task/project] during [date range], including any subagent sessions.<br />
+I was trying to [goal]. The result was [what happened]. Help me understand where the tokens went and what I could do differently next time.</p>
+<ul>
+<li>Break down usage by activity and model where the records allow.</li>
+<li>Look for repeated work, unnecessary status checks, and large amounts of context passed between agents. Show specific examples.</li>
+<li>Distinguish necessary work from likely waste. Don’t assume high usage or cached input was wasteful.</li>
+<li>Recommend the three most useful changes to my instructions, model choices, or agent setup.<br />
+If you can’t access the records you need, tell me what to provide.</li>
+</ul>
+<p>Steal this workflow</p>
+<p>Don’t send Fable to do a Sonnet’s job</p>
+<p>Spiral general manager Marcus Moretti’s token spend strategy is straightforward: Stay within the weekly usage limits for his Claude Code Max plan.</p>
+<p>It’s a simple goal that requires active management; Marcus is selective about which assignments go to Fable 5.1 and which go to a cheaper model.</p>
+<p>Here’s what that looks like in practice:</p>
+<p>Step 1. Learn what each model is good at. Marcus has used Anthropic's models long enough to know on sight whether a job needs Sonnet, Opus, or Fable-level intelligence.</p>
+<p>Step 2. Match the model to the assignment. Basic tasks—analytics checks, for example—go to Sonnet. Work with a clear objective, such as a tightly scoped product change, goes to Opus. For a larger feature—like the new billing implementation he’s working on—Marcus uses Fable 5.1 to develop the specification: what needs to be built and how it should work.</p>
+<p>Step 3. For complex work, let the model delegate. Once the plan is ready, Marcus tells Fable, “Kick this off, and for all coding tasks, use your judgment about delegating to a lower model.” Fable assigns pieces to Opus and Sonnet, then checks their work. This lets the strongest model manage the project without executing every task.</p>
+<p>Try it this week: Choose a recurring task and run it with a cheaper model than you usually use. Check whether the result meets your needs before making it your default for that task.</p>
+<p>The daily driver<br />
+The models the team is using this week:</p>
+<ul>
+<li>Douglas Brundage, head of marketing: Using Fable 5.1 more for visual work, plus Grok Bot to monitor social media and build a tool for visuals.</li>
+<li>Randy Counsman, head of video: Astra (high) for complex work and medium for basic tasks; Sol (extra high) for voice mode orchestration, where Astra feels too slow and heavy-handed. Fable for code-related planning and Opus when he runs out of Astra tokens.</li>
+<li>Kieran Klaassen, Cora general manager: Fable 5.1 (extra high, 1M context) for coding and knowledge work, switching to Astra for some research and writing.</li>
+<li>Tyler Nishida, design engineer: Fable 5.1 (high) as the coordinator/orchestrator for projects in Cursor, with Grok 4.6 (extra high) subagents. Astra (ultra) for personal projects. “It’s not a model, but Cursor projects are amazing as a daily driver for your preferred models. My sidebar is so clean, and it's so much easier to manage work.”</li>
+</ul>
+<p>Tyler’s Cursor setup. (Image courtesy of Tyler Nishida.)</p>
+<ul>
+<li>Katie Parrott, staff writer: “The Astra fever has broken for me,” she says. These days, she’s back to Sol (high) for task management and has switched to Claude models for writing because she finds Sol and Astra “too flat—they just report the facts instead of shaping a narrative that brings the reader along.”</li>
+<li>Natalia Quintero, head of consulting: Astra (medium).</li>
+<li>Yash Poojary, growth engineer: Astra (high) and Fable 5.1.</li>
+<li>Arielle Shipper, head of operations: Sol (medium). “Sol forever. SOLoyalist,” she says.</li>
+<li>Loren Stewart, engineer: Downgraded from Astra to Sol (medium) for coding to reduce costs and finds the switch is working well. Fable 5.1 “remains the champion thought partner.”</li>
+</ul>
+</div>
+  
+</section>
+
+  <p class="failed-line">
+  <a class="failed" href="#checks">5 of 12 checks failed <span aria-hidden="true">↓</span></a>
+  <button type="button" class="btn-quiet unfold" data-action="fold#toggle" title="Bring the checks back beside the answer"><span aria-hidden="true">⇤</span> Checks beside the answer</button>
+</p>
+
+
+  <div class="answer-checks">
+    <section class="answer" id="answer" aria-label="Answer">
+    <div class="card overflow-hidden">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-5 py-2.5 border-b border-rule mono text-[12px] text-ink-2">
+  <span class="truncate min-w-0 font-medium">ANSWER.md</span>
+  <span class="text-muted shrink-0 flex items-center gap-3"><span>the model&#39;s output · 5.29 KB</span><a class="text-link" data-turbo="false" href="/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMyNDUsInB1ciI6ImJsb2JfaWQifX0=--926da5c6955306a14a487f6769338350323a6835/ANSWER.md?disposition=attachment">download</a></span>
+</div>
+
+  
+    <div class="prose p-5 md:p-8"><h2 id="token-math-feedback-on-the-headline-dek-and-opening">Token Math: feedback on the headline, dek, and opening<a href="#token-math-feedback-on-the-headline-dek-and-opening" aria-label="Link to heading 'Token Math: feedback on the headline, dek, and opening'" data-heading-content="Token Math: feedback on the headline, dek, and opening" class="anchor"></a></h2>
+<h3 id="the-strongest-idea">The strongest idea<a href="#the-strongest-idea" aria-label="Link to heading 'The strongest idea'" data-heading-content="The strongest idea" class="anchor"></a></h3>
+<p><strong>The CEO sits at the top of the spending chart and thinks everyone else is underspending.</strong> That flips the usual rule about company spending, and it's the most surprising thing in the piece. The rest of the draft supplies the other half: <strong>spend freely, then account for it.</strong> Arielle asks three questions (what did it cost, what did it buy, what did we learn). Randy's 4.5-billion-token failure became a benchmark. Marcus matches each task to the right model. The package should promise both halves: permission to spend big, and the discipline of showing your work. Right now the hed and dek promise neither.</p>
+<h3 id="headline">Headline<a href="#headline" aria-label="Link to heading 'Headline'" data-heading-content="Headline" class="anchor"></a></h3>
+<p><strong>&quot;Token Math&quot;</strong> is a label, not a claim. It also promises something the piece doesn't deliver. The draft never runs the math: there are no dollar figures or cost-per-result numbers, and Dan and Willie explicitly agree to &quot;only then do the token math.&quot; If Token Math is a recurring column name, keep it as a kicker above the headline. It shouldn't be the headline itself.</p>
+<p><strong>&quot;How Many Tokens are Too Many?&quot;</strong> is a generic question, and the piece doesn't answer it. The argument isn't about a threshold. It's about whether the spending taught you something. (Title-case note: &quot;Are&quot; should be capitalized.)</p>
+<p><strong>Suggested replacements (first choice first):</strong></p>
+<ol>
+<li><strong>Our CEO Thinks We're Not Spending Enough on AI</strong>. This is the surprising claim, stated plainly, and it fits an email subject line. The body supplies the qualifiers.</li>
+<li><strong>Spend More Tokens. Then Show Your Work.</strong> This covers both halves of the piece, and it works well if you'd rather center the accountability system than Dan.</li>
+<li><strong>What 4.5 Billion Tokens Bought Us</strong> is the most vivid option. But it points to Randy's section, not the opening, so you'd need to restructure the lede to use it.</li>
+</ol>
+<p>Avoid a headline that starts with &quot;Every CEO…&quot;. In a subject line it reads as &quot;all CEOs.&quot;</p>
+<h3 id="dek">Dek<a href="#dek" aria-label="Link to heading 'Dek'" data-heading-content="Dek" class="anchor"></a></h3>
+<p><strong>&quot;What's the ROI on experimentation?&quot;</strong> is a second question stacked on the headline. It doesn't add a detail or an implication. Like &quot;Token Math,&quot; &quot;ROI&quot; promises a calculation the piece doesn't make.</p>
+<p><strong>The alt dek, &quot;When expensive experimentation is worth it and when to rein your tokenmaxxing in,&quot;</strong> contradicts the body, which says outright that &quot;the goal isn't tokenmaxxing.&quot; It also overpromises clear rules: Arielle evaluates runs &quot;case by case.&quot; And &quot;rein your tokenmaxxing in&quot; is clunky.</p>
+<p><strong>Suggested replacement (pairs with hed #1):</strong></p>
+<blockquote>
+<p>Big token bills are fine—as long as you can say what they bought. Here's how Every decides when an expensive AI experiment pays off, including one that burned through 4.5 billion tokens.</p>
+</blockquote>
+<p><strong>Shorter alternative:</strong></p>
+<blockquote>
+<p>Dan Shipper wants the team experimenting harder with AI. The catch: Every big run has to answer what it cost, what it bought, and what we learned.</p>
+</blockquote>
+<h3 id="opening-paragraph">Opening paragraph<a href="#opening-paragraph" aria-label="Link to heading 'Opening paragraph'" data-heading-content="Opening paragraph" class="anchor"></a></h3>
+<p>What works: the three-times gap is a great fact, and &quot;whether the rest of us are being ambitious enough&quot; is the right note to end on before you pivot to &quot;The goal isn't tokenmaxxing.&quot;</p>
+<p>Problems:</p>
+<ol>
+<li><strong>The first sentence is the weakest one.</strong> &quot;Often if you are … you might think about…&quot; hedges twice, uses a generic &quot;you,&quot; and is missing a comma after &quot;company.&quot; The paragraph builds up to its best fact instead of starting with it.</li>
+<li><strong>It makes the same point twice with different levels of certainty.</strong> Sentence two says Dan <em>thinks</em> everyone should &quot;consider ramping up.&quot; Sentence four says the gap has him <em>wondering whether</em> people are ambitious enough. Keep one. The &quot;wondering whether&quot; version is more accurate and makes the better closer.</li>
+<li><strong>It drops a factual qualifier.</strong> The leaderboard is specifically <em>OpenAI</em> token usage (per the caption), but the lede says only &quot;tokens.&quot; Say &quot;OpenAI tokens&quot; so the &quot;more than three times&quot; claim stays exact.</li>
+<li><strong>The pronouns shift.</strong> It moves from &quot;you&quot; to &quot;the rest of us.&quot; Since this is an Inside Every piece, commit to &quot;us.&quot;</li>
+<li><strong>&quot;Every CEO Dan Shipper&quot;</strong> is fine mid-sentence, but &quot;Every's CEO, Dan Shipper&quot; or &quot;Dan Shipper, Every's CEO&quot; avoids a stumble on &quot;every CEO.&quot;</li>
+</ol>
+<p><strong>Suggested replacement (keeps all the qualifiers):</strong></p>
+<blockquote>
+<p>Most people who find themselves at the top of their company's spending chart take it as a cue to cut back. Dan Shipper, Every's CEO, took it as a cue to look at everyone else. He uses more than three times as many OpenAI tokens as the next-highest user at the company, and the size of that gap has him wondering whether the rest of us are being ambitious enough with AI.</p>
+</blockquote>
+<p><strong>Tighter alternative that leads with the fact:</strong></p>
+<blockquote>
+<p>Dan Shipper uses more than three times as many OpenAI tokens as anyone else at Every. Most people would see that as a reason to rein themselves in. Dan sees it as a reason to wonder whether the rest of us are being ambitious enough with AI.</p>
+</blockquote>
+<p>Either version flows directly from hed #1 and sets up paragraph two (&quot;The goal isn't tokenmaxxing…&quot;) without changes.</p>
+<h3 id="recommended-package">Recommended package<a href="#recommended-package" aria-label="Link to heading 'Recommended package'" data-heading-content="Recommended package" class="anchor"></a></h3>
+<ul>
+<li><strong>HED:</strong> Our CEO Thinks We're Not Spending Enough on AI</li>
+<li><strong>DEK:</strong> Big token bills are fine—as long as you can say what they bought. Here's how Every decides when an expensive AI experiment pays off, including one that burned through 4.5 billion tokens.</li>
+<li><strong>LEDE:</strong> the first suggested replacement above.</li>
+</ul>
+<p><em>Assumption: I treated &quot;Token Math&quot; as a possible recurring column name. If it isn't one, drop it entirely.</em></p>
+</div>
+</div>
+
+  
+</section>
+
+
+    <aside class="checks card" id="checks" aria-label="Checks">
+      <div class="score">
+  <div class="min-w-0">
+    <span class="score-lg">7/12</span>
+    <span class="caption">checks passed</span>
+  </div>
+  <button type="button" class="btn-quiet fold" data-action="fold#toggle" title="Give the answer the full width. The checks follow it.">Fold away <span aria-hidden="true">⇥</span></button>
+  <button type="button" class="btn-quiet unfold" data-action="fold#toggle" title="Bring the checks back beside the answer"><span aria-hidden="true">⇤</span> Beside the answer</button>
+  <span class="strip lg" title="7/12 (58%)" aria-label="7/12 (58%)" role="img"><i class="p"></i><i class="p"></i><i class="p"></i><i class="p"></i><i class="f"></i><i class="f"></i><i class="p"></i><i class="p"></i><i class="p"></i><i class="f"></i><i class="f"></i><i class="f"></i></span>
+</div>
+
+    <h2 class="eyebrow !text-fail mt-5">5 failed</h2>
+    <div class="verdict" id="verdict_6987">
+  <div class="result">
+    <span class="pill pill-fail">fail</span>
+    
+  </div>
+    <p class="name">S02b. Interesting headline: replacement<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">The first-choice option &#39;Our CEO Thinks We&#39;re Not Spending Enough on AI&#39; only reports an internal directive, much like the rubric&#39;s failing example, and &#39;Spend More Tokens. Then Show Your Work.&#39; has a second clause that adds little specific to this article.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S02b. Does the AI’s feedback propose better headline options that all capture the interesting provocation in a concise, punchy way that would fit in an email subject line (at least mostly)? PASS if: The feedback actually proposes at least one replacement headline rather than merely recommending improvement, and every headline it proposes as an option meets the bar. This applies to recommended choices, ranked options, alternates and unranked lists. Options count even if they are not labeled usable; calling an alternate weaker or less punchy does not exempt it. A stronger option cannot rescue a weak proposed option. Clearly rejected examples are excluded. Each proposed option gives the intended Every reader a short, compelling, draft-supported angle, expressed concisely and punchily and mostly fitting in an email subject line. It may make the article’s argument about ambitious AI experimentation, foreground a specific experiment and what it taught us, or take another supported angle; no particular thesis wording, person or number is required. Each headline must give a reader outside Every a reason to care through a useful implication for their AI work, a compelling argument they can apply, or a vivid example with a transferable stake. Second person is not required, but it does help. The reader stake must be apparent from the headline itself; a dek cannot supply a missing reader stake. “The Case for a Bigger Token Bill” and “Why You Should Use More Tokens” are nonexhaustive passing directions; similar supported formulations pass without exact matching. Internal examples are allowed when they signal the larger argument; this is not a blanket ban on CEO or company anecdotes. If an option shifts the center away from the current Dan-led opening, the feedback must explicitly call for recentering the introduction and explain how, and supply a dek explicitly paired with that headline. The paired dek must stay on that option’s focal story or question and add a specific supported answer, consequence or stake. For a Randy 4.5-billion-token angle, it should tell what the run bought or taught, such as a benchmark and a leaner agent setup; merely pivoting to general spending decisions or sharing the words tokens or experiment does not continue that promise. No particular dek wording is required. In a two-part headline, the second part must tell the reader something specific about this article’s angle, question or payoff. “Spend the Tokens, Then Do the Math” fails the interest bar: the idiom is comprehensible, but only says evaluation will happen afterward and adds no information about what this article asks or reveals. Do not fail an idiom merely because it is an idiom; assess its information in this context, separately from S02c comprehension. Keep hedging and detailed qualifications out of the headline. Essential identifying context needed to understand the subject, action, or comparison is allowed and is not a qualification; boldness does not require ambiguity. FAIL if: The feedback proposes no replacement, or any headline it offers as an option fails the bar: proposed options remain topic labels, generic spending/value claims or questions, isolated facts, unsupported broad claims, or weak side stories without an explicit intro-recentering plan and an explicitly paired dek that continues their particular promise; only report an internal directive without an apparent stake for an outside reader; add an empty second clause that tells the reader nothing specific about this article; bury the claim in qualification; or sprawl beyond mostly fitting in an email subject line. “Our CEO Wants Us to Use More Tokens” fails this reader-interest bar because it only reports an internal directive; basic clarity and topicality are insufficient. Do not impose an invented exact character limit. Recognizing the original problem alone does not pass this replacement check. Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6988">
+  <div class="result">
+    <span class="pill pill-fail">fail</span>
+    
+  </div>
+    <p class="name">S03. Promise cashed out<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">The recommended headline &#39;Our CEO Thinks We&#39;re Not Spending Enough on AI&#39; presents the draft as a workplace story about a CEO directive rather than a broader case for ambitious experiments.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S03. Does the AI’s feedback assess whether the headline/subhead combination makes a promise that the article cashes out, using a loose standard?
+
+PASS if: The feedback considers whether the pair’s interest, answer or payoff is broadly delivered by the article, and any replacement pair it offers promises a broadly supported payoff. Equivalent discussion of framing accuracy, payoff or reader expectations counts. The body can supply nuance and qualifications; the headline need not mirror it literally. Qualitative returns such as learning, reusable benchmarks and better workflows can cash out an experimentation/ROI promise. A numerical ROI calculation is not required.
+
+FAIL if: The feedback ignores the promise/payoff question, recommends a promise the article does not come close to delivering, or insists on headline qualifications for literal faithfulness. Do not fail merely because the original article offers qualitative rather than numerical returns. The token maxing backlash is wrong remains borderline rather than an unconditional pass or fail.
+
+Also FAIL if an offered headline makes a supporting detail look like the article’s central story and leads the reader to expect a materially different kind of article, even when the literal claim appears in the body. “Our CEO Wants Us to Use More Tokens” frames this draft as a workplace story about how employees respond to a CEO directive; the draft uses his usage gap to make a broader case for ambitious AI experiments and examining what each experiment produced. A dek cannot fully rescue a headline whose primary frame points at the wrong story. Do not fail every headline that mentions Dan or Every: a headline can and should use internal examples when they accurately signal the larger argument. This does not require a full article summary or detailed headline qualifications.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6992">
+  <div class="result">
+    <span class="pill pill-fail">fail</span>
+    
+  </div>
+    <p class="name">S06. Diagnoses delayed hook<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">It flags double hedging and says the paragraph &#39;builds up to its best fact&#39; but never identifies that the first sentence&#39;s own point comes at its end, and its first replacement keeps the same &#39;top of their company&#39;s spending chart take it as a cue to cut back&#39; setup.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S06. Does the AI’s feedback notice that I only know the point of the first sentence—“reining yourself in”—at the very end?
+
+PASS if: The feedback specifically identifies the first sentence’s delayed point or condition-heavy setup and recommends getting to its point sooner or replacing that framing entirely. Equivalent descriptions count. This is sentence structure, distinct from where the paragraph introduces the statistic.
+
+FAIL if: The feedback only says the paragraph takes too long to reach the statistic, or vaguely calls the opening weak, without recognizing the first sentence’s delayed point. Also fail a proposed fix that keeps the same delayed setup.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6993">
+  <div class="result">
+    <span class="pill pill-fail">fail</span>
+    
+  </div>
+    <p class="name">S07. Interesting setup immediately<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">Both replacement openings delay the ambition implication behind a familiar reaction (&#39;take it as a cue to cut back&#39; / &#39;Most people would see that as a reason to rein themselves in&#39;) instead of presenting it right away.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S07. Does the AI’s feedback identify the interesting gap and what it implies, and recommend setting that up really quickly—in the first sentence, or at least most of it in the first sentence?
+
+PASS if: The feedback identifies the surprising possibility that the rest of the team is not being ambitious enough and calls for presenting it immediately. Any replacement opening it offers delivers that direction: it can combine the implication with the gap or lead with a provocation whose supporting gap follows promptly. In a gap-led version, connect the ambition implication in the first sentence or the immediately following sentence. Dan’s If your team is not wasting tokens, there’s probably something wrong is a passing provocation-first direction; numerical evidence can follow. Preserve the source’s more-than-three-times comparison when stating the number and the uncertainty of the inference.
+
+FAIL if: The feedback misses the gap’s ambition implication, leaves it buried, or recommends an opening that leads with a familiar spending warning or states the statistic and delays its interesting implication behind another familiar reaction. Do not require both number and implication in one literal sentence or exact wording from an example.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6994">
+  <div class="result">
+    <span class="pill pill-fail">fail</span>
+    
+  </div>
+    <p class="name">S08. CEO-specific cutback insight<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">Both offered openings rely on the unsupported default that the top spender would cut back: &#39;take it as a cue to cut back&#39; and &#39;Most people would see that as a reason to rein themselves in.&#39;</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S08. Does the AI’s feedback avoid an ill-fitting default cutback reaction in every offered replacement opening for this CEO case?
+
+PASS if: Every usable offered opening avoids treating an imagined order or default expectation to cut back as the normal reaction to this CEO’s token spending. Dan: “usually the biggest spender is asked to cut back” does not typically apply when the biggest spender is the CEO, and is familiar/boring. A supported description of Dan himself weighing whether to spend less, or Arielle’s actual card/leaderboard process, may pass.
+
+FAIL if: Any usable offered opening relies on the unsupported biggest-spender-usually-asked-to-cut-back contrast as the hook for Dan’s CEO case, including equivalent unsupported defaults such as the obvious move is to rein it in or cue to cut back. Fail even if the feedback elsewhere diagnoses the flaw; a good alternative does not rescue a usable bad opening. A quote used solely to criticize the wording, or a clearly rejected example, is not an offered opening. This tests contextual fit, separately from S07’s sentence-placement rule. If no replacement opening is offered, do not fail this check solely for the omission.
+
+Return PASS or FAIL and one sentence citing the offered setup or absence of such a setup.</p></details>
+  </div>
+</div>
+    <details class="disclosure passed mt-2">
+      <summary>7 passed</summary>
+      <div class="verdict" id="verdict_6983">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name"><span class="mono font-medium">ai-wording</span><span class="chip ml-2">every task</span></p>
+  <div class="detail">
+    <p class="desc">deliverable text contains none of the shared AI-tell phrases in bench/ai-tells.txt. Task checks may add narrower contractual bans, but must not repeat this shared floor.</p>
+      <div class="clamp" data-controller="clamp"><p class="mono text-[12px] text-ink-2 mt-2 pl-3 border-l-2 border-rule" data-clamp-target="text">inspected ANSWER.md</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+  </div>
+</div><div class="verdict" id="verdict_6984">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S02c. Headline makes sense on its own<span class="chip ml-2">this task</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">All three suggested headlines stand on their own: &#39;Our CEO Thinks We&#39;re Not Spending Enough on AI&#39; states a clear claim, &#39;Spend More Tokens. Then Show Your Work.&#39; is a clear pair of instructions, and &#39;What 4.5 Billion Tokens Bought Us&#39; clearly names a spend and asks what it produced, so none needs the dek to fill in a missing meaning.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S02c. Does each headline offered as a usable replacement make sense on its own to the intended reader? PASS if: Each proposed headline communicates an intelligible claim, question, or subject without requiring the dek, article, or accompanying explanation to supply missing meaning. The subject, action, referents, and any comparison or scope essential to understanding are clear enough that the reader can restate the intended meaning without guessing or filling in an unstated premise. Recognizing a topic or familiar phrase is not enough when the central action or relationship remains unspecified. The reader must understand what is being acted on and what any linked evaluation, comparison, or consequence refers to; a plausible interpretation supplied by the reviewer is insufficient. Normal audience knowledge and familiar vocabulary are allowed. FAIL if: Any headline offered as usable depends on an opaque slogan, an unspecified action or referent, or omitted context essential to understanding. A stronger alternative or explanatory dek does not rescue that headline. Clearly rejected examples are excluded. A headline may withhold an answer to create curiosity, but its premise must be understandable. Essential context is different from hedging or detailed qualifications; do not require a complete summary or every factual qualification. Assess clarity here, separately from interest and factual support. If no replacement headline is offered, do not fail this check for the omission; S02b assesses that. Return PASS or FAIL and one sentence of evidence from the proposed headline copy.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6985">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S01. On topic<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">The feedback treats &#39;Token Math&#39; as an on-topic label and says the piece is about spending freely and then accounting for it, and its main replacements stay on token spending and ambitious experimentation.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S01. Does the AI’s feedback assess whether the headline talks about the main thing in the article?
+
+PASS if: The feedback correctly treats Token Math as on topic and relates the framing to the article’s main subject or idea: token spending, ambitious AI experimentation and what experimentation buys or teaches the team. Any replacement headline stays on that main thing. Interest is assessed separately in S02a and S02b.
+
+FAIL if: The feedback wrongly calls the original headline off topic, misses the article’s main subject or proposes a replacement headline about a tangent. Do not fail merely because the original headline is on topic but uninteresting.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6986">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S02a. Interesting headline: diagnosis<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">It says &#39;&quot;Token Math&quot; is a label, not a claim&#39; and identifies the surprising idea it misses: &#39;The CEO sits at the top of the spending chart and thinks everyone else is underspending.&#39;</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S02a. Does the AI’s feedback identify why the headline isn’t interesting enough—why it fails to capture the most interesting, counterintuitive or surprising part of the article that makes me feel, “ooh, I need to read that”?
+
+PASS if: The feedback recognizes that Token Math merely names the topic and does not convey the article’s interesting provocation, tension or payoff. Equivalent descriptions count; it need not use Dan’s exact words. This check assesses recognition, so no replacement is required to pass it.
+
+FAIL if: The feedback misses the interest problem, treats being on topic as sufficient, or only offers vague advice without identifying what is missing. Do not fail this diagnosis check because a replacement headline is weak; assess that separately in S02b.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6989">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S04a. Headline and dek connect: diagnosis<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">It says the dek &#39;is a second question stacked on the headline. It doesn&#39;t add a detail or an implication.&#39;</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S04a. Does the AI’s feedback identify whether the headline and subhead form a connected whole, where the headline raises a question or topic of interest that the dek deepens and gives more details on?
+
+PASS if: The feedback recognizes that Token Math and What’s the ROI on experimentation? relate but their connection is not obvious, or gives equivalent criticism that the dek does not clearly develop the headline. This check assesses recognition, so no replacement pair is required to pass it.
+
+FAIL if: The feedback reviews the two in isolation without addressing their relationship, treats the original pairing as fine, or misses the difference between being loosely related and forming a connected whole. A good replacement pair alone does not establish that the feedback identified this problem; assess its copy separately in S04b.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6990">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S04b. Headline and dek connect: replacement<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">It pairs &#39;Our CEO Thinks We&#39;re Not Spending Enough on AI&#39; with &#39;Big token bills are fine—as long as you can say what they bought…&#39;, a dek that develops the headline with a condition and a mechanism.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S04b. Does the AI’s feedback propose a headline/subhead pair that actually forms a connected whole, with the dek deepening the headline and giving more details on it?
+
+PASS if: The feedback actually proposes at least one usable headline/subhead pair. The connection is clear and the dek develops the headline’s question or claim with an implication, mechanism, stake or detail in concise, compelling language. A headline and dek recommended together can count without a prescribed presentation format. For Why you should be spending more on tokens, Maximizing your company’s AI use requires risky experiments illustrates the relationship. Exact wording or a risk theme is not required. Judge the relationship here; headline interest is assessed separately in S02b.
+
+FAIL if: The feedback proposes no usable pair, or none of its proposed pairs clearly develops the headline: the dek is unrelated, merely restates it, leaves its connection unclear, or introduces a different promise. Merely identifying the original problem does not pass this replacement check. The spoken four-X-engineers example illustrates structure; it is not an established source fact or grading target.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div><div class="verdict" id="verdict_6991">
+  <div class="result">
+    <span class="pill pill-pass">pass</span>
+    
+  </div>
+    <p class="name">S05. Weasel words<span class="chip ml-2">this case</span></p>
+  <div class="detail">
+    
+      <p class="eyebrow mt-3">Judge's reasoning</p>
+      <div class="clamp" data-controller="clamp"><p class="body" data-clamp-target="text">It says &#39;&quot;Often if you are … you might think about…&quot; hedges twice&#39;, and the replacement openings drop that hedging.</p><button type="button" class="btn-quiet" hidden="hidden" aria-expanded="false" data-clamp-target="button" data-action="clamp#toggle"><span class="more">Read all</span><span class="less">Show less</span></button></div>
+      <details class="disclosure mt-2"><summary>Rubric</summary><p class="text-[14.5px] text-ink-2 mt-1 whitespace-pre-line pl-4 border-l-2 border-rule ml-2 font-serif">S05. Does the AI’s feedback call out weasel words in the headline, dek, or first line, like “often” and “you might think about”, that make the point tentative?
+
+PASS if: The feedback identifies unnecessary hedging, tentativeness or needless indirection in the original lead-in, tied to an actual phrase such as often or you might think about. Equivalent wording counts; it need not say weasel words or name both examples. Where it offers replacement copy, that copy removes the empty lead-in. Preserve uncertainty that carries real meaning: possible, probably, might or similar words can be appropriate for a genuine inference.
+
+FAIL if: The feedback ignores the unnecessarily tentative lead-in, discusses only a different issue, or repeats equivalent empty hedging in its replacement. Do not apply a blanket ban on uncertainty words.
+
+Return PASS or FAIL and one sentence of evidence from the AI’s feedback.</p></details>
+  </div>
+</div>
+    </details>
+  <p class="mono text-[12px] text-muted mt-3 flex flex-wrap gap-x-4 gap-y-1">
+    <span>judged by Claude</span>
+    
+    
+  </p>
+
+    </aside>
+  </div>
+</div></main>
+  </body>
+</html>

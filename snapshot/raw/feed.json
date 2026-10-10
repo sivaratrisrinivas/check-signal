@@ -1,0 +1,95 @@
+{
+ "schema": "every-benchmark-result/v1",
+ "benchmark": {
+  "slug": "dans-editorial-checks",
+  "title": "Dan\u2019s Editorial Checks"
+ },
+ "runs": [
+  {
+   "id": "gpt-6.1-sol__codex__high",
+   "model": "GPT-6.1 Sol",
+   "agent": "codex",
+   "effort": "high",
+   "date": "2026-10-01",
+   "variant": null,
+   "url": "https://checks.every.to/p/dans-editorial-checks/GPT-6.1%20Sol",
+   "avg": 83,
+   "tasks": {
+    "07-literary-analysis-follow-up": 67,
+    "02-personal-benchmark-paragraph-first-draft": 100,
+    "01-article-opening-feedback": 83,
+    "03-personal-benchmark-paragraph-revision": 80,
+    "04-tend-feed-card-writing": 83
+   }
+  },
+  {
+   "id": "claude-beignet-eap[1m]__claude__high",
+   "model": "Sonnet 5.5",
+   "agent": "claude",
+   "effort": "high",
+   "date": "2026-09-24",
+   "variant": null,
+   "url": "https://checks.every.to/p/dans-editorial-checks/Sonnet%205.5",
+   "avg": 55,
+   "tasks": {
+    "04-tend-feed-card-writing": 50,
+    "02-personal-benchmark-paragraph-first-draft": 38,
+    "07-literary-analysis-follow-up": 33,
+    "01-article-opening-feedback": 75,
+    "03-personal-benchmark-paragraph-revision": 80
+   }
+  },
+  {
+   "id": "zenith-alpha__codex__high",
+   "model": "GPT-6 Sol",
+   "agent": "codex",
+   "effort": "high",
+   "date": "2026-09-22",
+   "variant": null,
+   "url": "https://checks.every.to/p/dans-editorial-checks/GPT-6%20Sol",
+   "avg": 64,
+   "tasks": {
+    "07-literary-analysis-follow-up": 33,
+    "01-article-opening-feedback": 67,
+    "04-tend-feed-card-writing": 50,
+    "03-personal-benchmark-paragraph-revision": 80,
+    "02-personal-benchmark-paragraph-first-draft": 88
+   }
+  },
+  {
+   "id": "claude-wafer-eap__claude__high",
+   "model": "Opus 5.5",
+   "agent": "claude",
+   "effort": "high",
+   "date": "2026-09-21",
+   "variant": null,
+   "url": "https://checks.every.to/p/dans-editorial-checks/Opus%205.5",
+   "avg": 53,
+   "tasks": {
+    "07-literary-analysis-follow-up": 33,
+    "02-personal-benchmark-paragraph-first-draft": 25,
+    "01-article-opening-feedback": 58,
+    "03-personal-benchmark-paragraph-revision": 80,
+    "04-tend-feed-card-writing": 67
+   }
+  },
+  {
+   "id": "gpt-5.6-sol__codex__high",
+   "model": "GPT-5.6",
+   "agent": "codex",
+   "effort": "high",
+   "date": "2026-09-21",
+   "variant": null,
+   "url": "https://checks.every.to/p/dans-editorial-checks/GPT-5.6",
+   "avg": 51,
+   "tasks": {
+    "01-article-opening-feedback": 67,
+    "04-tend-feed-card-writing": 50,
+    "03-personal-benchmark-paragraph-revision": 80,
+    "07-literary-analysis-follow-up": 33,
+    "02-personal-benchmark-paragraph-first-draft": 25
+   }
+  }
+ ],
+ "generated_at": "2026-10-10T05:06:27Z"
+}

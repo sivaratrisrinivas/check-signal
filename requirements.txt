@@ -1,0 +1,2 @@
+# The app is stdlib only. This is just for the tests.
+pytest>=8

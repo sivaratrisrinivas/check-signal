@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dan’s Editorial Checks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="SnQJ3Op6MwUMcSCEpeQNB98ktNlaenuhGqqECVN_b-GxKwBm0ZBy3-jA5xD_ioA-CYxzKMcTFJVkdN4-fygMuA" />
+    
+    <link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,401,500,501,600,601,700,701&f[]=switzer@400,401,500,501,600,601&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/application-8b441ae0.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="/assets/tailwind-f8744f55.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-bfcdf840.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-9fd88cd5.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/clamp_controller": "/assets/controllers/clamp_controller-e3997492.js",
+    "controllers/copy_controller": "/assets/controllers/copy_controller-d80b422c.js",
+    "controllers/editor_controller": "/assets/controllers/editor_controller-7cf4ce1a.js",
+    "controllers/files_controller": "/assets/controllers/files_controller-b1a8d031.js",
+    "controllers/filter_controller": "/assets/controllers/filter_controller-ec18dd7f.js",
+    "controllers/fold_controller": "/assets/controllers/fold_controller-900fe9a9.js",
+    "controllers": "/assets/controllers/index-ee64e1f1.js",
+    "controllers/mint_controller": "/assets/controllers/mint_controller-b655a8fe.js",
+    "controllers/picks_controller": "/assets/controllers/picks_controller-5e274f07.js",
+    "controllers/poll_controller": "/assets/controllers/poll_controller-e31fd800.js",
+    "controllers/rows_controller": "/assets/controllers/rows_controller-95242814.js",
+    "controllers/scroll_current_controller": "/assets/controllers/scroll_current_controller-c26a97b4.js",
+    "controllers/scroll_hint_controller": "/assets/controllers/scroll_hint_controller-868cbce4.js",
+    "controllers/shell_controller": "/assets/controllers/shell_controller-75f366f8.js",
+    "controllers/tabs_controller": "/assets/controllers/tabs_controller-3dfde441.js",
+    "controllers/toast_controller": "/assets/controllers/toast_controller-0dcb36a5.js",
+    "controllers/toggle_controller": "/assets/controllers/toggle_controller-440477d7.js",
+    "controllers/tooltip_controller": "/assets/controllers/tooltip_controller-b72acfa5.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-bfcdf840.js">
+<link rel="modulepreload" href="/assets/turbo.min-9fd88cd5.js">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="/assets/controllers/clamp_controller-e3997492.js">
+<link rel="modulepreload" href="/assets/controllers/copy_controller-d80b422c.js">
+<link rel="modulepreload" href="/assets/controllers/editor_controller-7cf4ce1a.js">
+<link rel="modulepreload" href="/assets/controllers/files_controller-b1a8d031.js">
+<link rel="modulepreload" href="/assets/controllers/filter_controller-ec18dd7f.js">
+<link rel="modulepreload" href="/assets/controllers/fold_controller-900fe9a9.js">
+<link rel="modulepreload" href="/assets/controllers/index-ee64e1f1.js">
+<link rel="modulepreload" href="/assets/controllers/mint_controller-b655a8fe.js">
+<link rel="modulepreload" href="/assets/controllers/picks_controller-5e274f07.js">
+<link rel="modulepreload" href="/assets/controllers/poll_controller-e31fd800.js">
+<link rel="modulepreload" href="/assets/controllers/rows_controller-95242814.js">
+<link rel="modulepreload" href="/assets/controllers/scroll_current_controller-c26a97b4.js">
+<link rel="modulepreload" href="/assets/controllers/scroll_hint_controller-868cbce4.js">
+<link rel="modulepreload" href="/assets/controllers/shell_controller-75f366f8.js">
+<link rel="modulepreload" href="/assets/controllers/tabs_controller-3dfde441.js">
+<link rel="modulepreload" href="/assets/controllers/toast_controller-0dcb36a5.js">
+<link rel="modulepreload" href="/assets/controllers/toggle_controller-440477d7.js">
+<link rel="modulepreload" href="/assets/controllers/tooltip_controller-b72acfa5.js">
+<script type="module">import "application"</script>
+      <meta name="posthog-tracking" content="enabled" data-turbo-track="reload">
+    <link rel="preconnect" href="https://pha.every.to" crossorigin>
+    <script data-turbo-eval="false">
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="vu fu pu gu bu init Hu zu qu ju Gu Xa Bu Qu Du eh ih nh sh rh oh capture getExtension Uu cu hh calculateEventProperties uh register register_once register_for_session unregister unregister_for_session gh Nu dh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset yh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fh Xu createPersonProfile setInternalOrTestUser ph wu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ju debug Ya Os getPageViewId captureTraceFeedback captureTraceMetric Ru".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_nVX3GaY5rdpJDJTwooVi5AcDmhFaDVujKc6GLJNp67Vq', {
+        api_host: 'https://pha.every.to',
+        ui_host: 'https://us.posthog.com',
+        defaults: '2026-05-30',
+        capture_pageview: 'history_change',
+        person_profiles: 'identified_only',
+      });
+    </script>
+
+  </head>
+  <body class="min-h-screen flex flex-col" data-controller="shell" >
+    <a href="#main" class="skip" data-turbo="false">Skip to the page</a>
+
+    
+    <header class="topbar">
+      <div class="h-full px-3 md:px-5 flex items-center gap-3">
+        <a class="brand min-w-0" href="/p/dans-editorial-checks"><span class="mark"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="4" width="2" height="8" rx=".6" class="p"/><rect x="5.4" y="4" width="2" height="8" rx=".6" class="p"/><rect x="8.6" y="4" width="2" height="8" rx=".6" class="f"/><rect x="11.8" y="4" width="2" height="8" rx=".6" class="p"/></svg></span>
+<span class="truncate">Dan’s Editorial Checks</span></a>
+          <nav class="benchnav" aria-label="Benchmark">
+  <a aria-current="page" href="/p/dans-editorial-checks">Scoreboard</a>
+    <details class="dropdown" data-shot="tasks-menu">
+      <summary>
+        Tasks<svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+</summary>      <div class="menu left">
+          <a class="menu-item text-[13.5px]" title="Article opening feedback" href="/p/dans-editorial-checks/tasks/01-article-opening-feedback"><span class="truncate">article-opening-feedback</span></a>
+          <a class="menu-item text-[13.5px]" title="Personal benchmark paragraph — first draft" href="/p/dans-editorial-checks/tasks/02-personal-benchmark-paragraph-first-draft"><span class="truncate">personal-benchmark-paragraph-first-draft</span></a>
+          <a class="menu-item text-[13.5px]" title="Personal benchmark paragraph — revision" href="/p/dans-editorial-checks/tasks/03-personal-benchmark-paragraph-revision"><span class="truncate">personal-benchmark-paragraph-revision</span></a>
+          <a class="menu-item text-[13.5px]" title="Tend feed-card writing" href="/p/dans-editorial-checks/tasks/04-tend-feed-card-writing"><span class="truncate">tend-feed-card-writing</span></a>
+          <a class="menu-item text-[13.5px]" title="Literary analysis follow-up" href="/p/dans-editorial-checks/tasks/07-literary-analysis-follow-up"><span class="truncate">literary-analysis-follow-up</span></a>
+      </div>
+    </details>
+  <details class="dropdown" data-shot="models-menu">
+  <summary>
+    <span class="truncate">Models</span><svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+</summary>  <div class="menu left">
+      <a class="menu-item text-[13.5px]" title="GPT-6.1 Sol" href="/p/dans-editorial-checks/GPT-6.1%20Sol"><span class="truncate">GPT-6.1 Sol</span></a>
+      <a class="menu-item text-[13.5px]" title="GPT-6 Sol" href="/p/dans-editorial-checks/GPT-6%20Sol"><span class="truncate">GPT-6 Sol</span></a>
+      <a class="menu-item text-[13.5px]" title="Sonnet 5.5" href="/p/dans-editorial-checks/Sonnet%205.5"><span class="truncate">Sonnet 5.5</span></a>
+      <a class="menu-item text-[13.5px]" title="Opus 5.5" href="/p/dans-editorial-checks/Opus%205.5"><span class="truncate">Opus 5.5</span></a>
+      <a class="menu-item text-[13.5px]" title="GPT-5.6" href="/p/dans-editorial-checks/GPT-5.6"><span class="truncate">GPT-5.6</span></a>
+  </div>
+</details>
+
+</nav>
+
+        <div class="ml-auto flex items-center gap-3 shrink-0">
+          
+          <span class="every-lockup small ">
+  <a class="every-wordmark-link" aria-label="Every" href="https://every.to/"><span class="every-wordmark"></span></a>
+    <span class="every-lockup-slash" aria-hidden="true">/</span>
+    <span class="every-lockup-name">Checks</span>
+</span>
+
+        </div>
+      </div>
+    </header>
+    
+    <main id="main" tabindex="-1" class="content flex-1">
+<h1 class="page-title">Scoreboard</h1>
+<p class="facts mt-1"><span>5 models</span><span>5 tasks</span></p>
+  <div class="mt-5"><div class="gridshell card" data-controller="scroll-hint tooltip" data-action="keydown.esc@window-&gt;tooltip#hide scroll@window-&gt;tooltip#hide resize@window-&gt;tooltip#hide turbo:before-cache@document-&gt;tooltip#hide">
+  <div class="gridwrap" data-scroll-hint-target="box" data-action="scroll->tooltip#hide">
+    <table class="grid-table">
+      <thead><tr>
+        <th scope="col" class="rowhead eyebrow">Model</th>
+        <th scope="col" class="overall eyebrow">Overall</th>
+        <th scope="col"><a class="hover:underline" href="/p/dans-editorial-checks/tasks/01-article-opening-feedback"><span class="t">article-opening-feedback</span></a></th><th scope="col"><a class="hover:underline" href="/p/dans-editorial-checks/tasks/02-personal-benchmark-paragraph-first-draft"><span class="t">personal-benchmark-paragraph-first-draft</span></a></th><th scope="col"><a class="hover:underline" href="/p/dans-editorial-checks/tasks/03-personal-benchmark-paragraph-revision"><span class="t">personal-benchmark-paragraph-revision</span></a></th><th scope="col"><a class="hover:underline" href="/p/dans-editorial-checks/tasks/04-tend-feed-card-writing"><span class="t">tend-feed-card-writing</span></a></th><th scope="col"><a class="hover:underline" href="/p/dans-editorial-checks/tasks/07-literary-analysis-follow-up"><span class="t">literary-analysis-follow-up</span></a></th>
+      </tr></thead>
+      <tbody>
+          <tr>
+            <th scope="row" class="rowhead"><a class="block truncate hover:underline" href="/p/dans-editorial-checks/GPT-6.1%20Sol">GPT-6.1 Sol</a><div class="sub">Codex CLI · high effort</div></th>
+            <td class="overall" title="5 of 5 tasks"><span class="score-md">83%</span><span class="verdict-bar" style="--p:0.83" aria-hidden="true"></span></td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.83" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6.1 Sol · article-opening-feedback" data-tip-url="/runs/1833/tip?heading=GPT-6.1+Sol+%C2%B7+article-opening-feedback&amp;v=1790875736" href="/p/dans-editorial-checks/runs/1833">83%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:1.0" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6.1 Sol · personal-benchmark-paragraph-first-draft" data-tip-url="/runs/1834/tip?heading=GPT-6.1+Sol+%C2%B7+personal-benchmark-paragraph-first-draft&amp;v=1790875747" href="/p/dans-editorial-checks/runs/1834">100%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.8" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6.1 Sol · personal-benchmark-paragraph-revision" data-tip-url="/runs/1835/tip?heading=GPT-6.1+Sol+%C2%B7+personal-benchmark-paragraph-revision&amp;v=1790875756" href="/p/dans-editorial-checks/runs/1835">80%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.83" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6.1 Sol · tend-feed-card-writing" data-tip-url="/runs/1839/tip?heading=GPT-6.1+Sol+%C2%B7+tend-feed-card-writing&amp;v=1790876220" href="/p/dans-editorial-checks/runs/1839">83%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.67" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6.1 Sol · literary-analysis-follow-up" data-tip-url="/runs/1837/tip?heading=GPT-6.1+Sol+%C2%B7+literary-analysis-follow-up&amp;v=1790875776" href="/p/dans-editorial-checks/runs/1837">67%</a>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row" class="rowhead"><a class="block truncate hover:underline" href="/p/dans-editorial-checks/GPT-6%20Sol">GPT-6 Sol</a><div class="sub">Codex CLI · high effort</div></th>
+            <td class="overall" title="5 of 5 tasks"><span class="score-md">64%</span><span class="verdict-bar" style="--p:0.64" aria-hidden="true"></span></td>
+              <td class="">
+                                  <a class="cell" style="--p:0.67" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6 Sol · article-opening-feedback" data-tip-url="/runs/1253/tip?heading=GPT-6+Sol+%C2%B7+article-opening-feedback&amp;v=1790035820" href="/p/dans-editorial-checks/runs/1253">67%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.88" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6 Sol · personal-benchmark-paragraph-first-draft" data-tip-url="/runs/1254/tip?heading=GPT-6+Sol+%C2%B7+personal-benchmark-paragraph-first-draft&amp;v=1790035825" href="/p/dans-editorial-checks/runs/1254">88%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.8" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6 Sol · personal-benchmark-paragraph-revision" data-tip-url="/runs/1255/tip?heading=GPT-6+Sol+%C2%B7+personal-benchmark-paragraph-revision&amp;v=1790035844" href="/p/dans-editorial-checks/runs/1255">80%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.5" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6 Sol · tend-feed-card-writing" data-tip-url="/runs/1260/tip?heading=GPT-6+Sol+%C2%B7+tend-feed-card-writing&amp;v=1790035978" href="/p/dans-editorial-checks/runs/1260">50%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.33" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-6 Sol · literary-analysis-follow-up" data-tip-url="/runs/1257/tip?heading=GPT-6+Sol+%C2%B7+literary-analysis-follow-up&amp;v=1790035890" href="/p/dans-editorial-checks/runs/1257">33%</a>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row" class="rowhead"><a class="block truncate hover:underline" href="/p/dans-editorial-checks/Sonnet%205.5">Sonnet 5.5</a><div class="sub">Claude Code · high effort</div></th>
+            <td class="overall" title="5 of 5 tasks"><span class="score-md">55%</span><span class="verdict-bar" style="--p:0.55" aria-hidden="true"></span></td>
+              <td class="">
+                                  <a class="cell" style="--p:0.75" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Sonnet 5.5 · article-opening-feedback" data-tip-url="/runs/1490/tip?heading=Sonnet+5.5+%C2%B7+article-opening-feedback&amp;v=1790214474" href="/p/dans-editorial-checks/runs/1490">75%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.38" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Sonnet 5.5 · personal-benchmark-paragraph-first-draft" data-tip-url="/runs/1491/tip?heading=Sonnet+5.5+%C2%B7+personal-benchmark-paragraph-first-draft&amp;v=1790214621" href="/p/dans-editorial-checks/runs/1491">38%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.8" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Sonnet 5.5 · personal-benchmark-paragraph-revision" data-tip-url="/runs/1493/tip?heading=Sonnet+5.5+%C2%B7+personal-benchmark-paragraph-revision&amp;v=1790214747" href="/p/dans-editorial-checks/runs/1493">80%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.5" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Sonnet 5.5 · tend-feed-card-writing" data-tip-url="/runs/1496/tip?heading=Sonnet+5.5+%C2%B7+tend-feed-card-writing&amp;v=1790215514" href="/p/dans-editorial-checks/runs/1496">50%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.33" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Sonnet 5.5 · literary-analysis-follow-up" data-tip-url="/runs/1499/tip?heading=Sonnet+5.5+%C2%B7+literary-analysis-follow-up&amp;v=1790216312" href="/p/dans-editorial-checks/runs/1499">33%</a>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row" class="rowhead"><a class="block truncate hover:underline" href="/p/dans-editorial-checks/Opus%205.5">Opus 5.5</a><div class="sub">Claude Code · high effort</div></th>
+            <td class="overall" title="5 of 5 tasks"><span class="score-md">53%</span><span class="verdict-bar" style="--p:0.53" aria-hidden="true"></span></td>
+              <td class="">
+                                  <a class="cell" style="--p:0.58" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Opus 5.5 · article-opening-feedback" data-tip-url="/runs/819/tip?heading=Opus+5.5+%C2%B7+article-opening-feedback&amp;v=1789832955" href="/p/dans-editorial-checks/runs/819">58%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.25" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Opus 5.5 · personal-benchmark-paragraph-first-draft" data-tip-url="/runs/820/tip?heading=Opus+5.5+%C2%B7+personal-benchmark-paragraph-first-draft&amp;v=1789833864" href="/p/dans-editorial-checks/runs/820">25%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.8" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Opus 5.5 · personal-benchmark-paragraph-revision" data-tip-url="/runs/828/tip?heading=Opus+5.5+%C2%B7+personal-benchmark-paragraph-revision&amp;v=1789848082" href="/p/dans-editorial-checks/runs/828">80%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.67" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Opus 5.5 · tend-feed-card-writing" data-tip-url="/runs/991/tip?heading=Opus+5.5+%C2%B7+tend-feed-card-writing&amp;v=1789933250" href="/p/dans-editorial-checks/runs/991">67%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.33" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="Opus 5.5 · literary-analysis-follow-up" data-tip-url="/runs/1058/tip?heading=Opus+5.5+%C2%B7+literary-analysis-follow-up&amp;v=1789960864" href="/p/dans-editorial-checks/runs/1058">33%</a>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row" class="rowhead"><a class="block truncate hover:underline" href="/p/dans-editorial-checks/GPT-5.6">GPT-5.6</a><div class="sub">Codex CLI · high effort</div></th>
+            <td class="overall" title="5 of 5 tasks"><span class="score-md">51%</span><span class="verdict-bar" style="--p:0.51" aria-hidden="true"></span></td>
+              <td class="">
+                                  <a class="cell" style="--p:0.67" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-5.6 · article-opening-feedback" data-tip-url="/runs/1182/tip?heading=GPT-5.6+%C2%B7+article-opening-feedback&amp;v=1790010763" href="/p/dans-editorial-checks/runs/1182">67%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.25" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-5.6 · personal-benchmark-paragraph-first-draft" data-tip-url="/runs/1185/tip?heading=GPT-5.6+%C2%B7+personal-benchmark-paragraph-first-draft&amp;v=1790011050" href="/p/dans-editorial-checks/runs/1185">25%</a>
+              </td>
+              <td class="best">
+                                  <a class="cell" style="--p:0.8" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-5.6 · personal-benchmark-paragraph-revision" data-tip-url="/runs/1187/tip?heading=GPT-5.6+%C2%B7+personal-benchmark-paragraph-revision&amp;v=1790011144" href="/p/dans-editorial-checks/runs/1187">80%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.5" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-5.6 · tend-feed-card-writing" data-tip-url="/runs/1191/tip?heading=GPT-5.6+%C2%B7+tend-feed-card-writing&amp;v=1790011797" href="/p/dans-editorial-checks/runs/1191">50%</a>
+              </td>
+              <td class="">
+                                  <a class="cell" style="--p:0.33" data-action="mouseenter-&gt;tooltip#show mousemove-&gt;tooltip#move mouseleave-&gt;tooltip#hide focusin-&gt;tooltip#show focusout-&gt;tooltip#hide" data-turbo-prefetch="false" data-tip-heading="GPT-5.6 · literary-analysis-follow-up" data-tip-url="/runs/1132/tip?heading=GPT-5.6+%C2%B7+literary-analysis-follow-up&amp;v=1790009977" href="/p/dans-editorial-checks/runs/1132">33%</a>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<details class="disclosure mt-6 max-w-2xl">
+  <summary>How scores work</summary>
+  <div class="text-[15px] text-ink-2 mt-2 grid gap-2 pl-5">
+    <p>Dan’s Editorial Checks is one person's benchmark: real work they use AI for, scored by the things they check when deciding whether an output is good. It answers "which model is best at my job, for the things I care about", not a general claim about model quality.</p>
+    <p>One row per model, each case scored by its latest public run. Under each score a bar is ink for the share of checks passed and hatched for the rest; the best score in each column is bold.</p>
+    <p>A run reads as checks passed over checks applicable. Code checks are answered by a program, model checks by an LLM judge, which is always Claude. A case is scored by its latest run, a task is the mean of its cases, and Overall is the mean across tasks. Overall's bar is as long as the share of the tasks the model ran, and the rest of its track is empty. Open a cell to read the actual output beside the checks it passed and failed.</p>
+    <p><a class="text-link mono text-[13px]" href="/p/dans-editorial-checks/feed">JSON feed</a></p>   
+  </div>
+</details>
+</main>
+  </body>
+</html>
