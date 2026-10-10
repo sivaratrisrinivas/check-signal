@@ -6,7 +6,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from html import escape as e
 
-from checksignal.analyze import (check_matrix, deciding_only_scores, flags, hidden_ties, label,
+from checksignal.analyze import (audit_notes, check_matrix, deciding_only_scores, flags, hidden_ties, label,
                                  rank, reconcile, spread, suggestion, summary, switch, task_scores)
 
 SNAP = os.path.join("snapshot", "benchmark.json")
@@ -230,12 +230,35 @@ def build_memo(snap, s, ties, fl):
 <li>Where does the flagged phrase on tend-feed-card-writing come from? It isn't in the public answer files I could download.</li>
 <li>Are the low or missing token counts on some Opus 5.5 runs complete?</li>
 <li>How long does a benchmark tuning review take today? That decides how much time this saves.</li></ul></section>
+{audit_section(snap)}
 <section><h2>How I'd measure it in the product</h2>
 <ul><li>Share of checks that separate models, per benchmark, over time.</li>
 <li>Share of benchmarks where a flag is acted on within a week.</li>
 <li>"Switch" decisions later reversed (the failure metric).</li></ul></section>
 </main></body></html>"""
     open(os.path.join(OUT, "memo.html"), "w").write(body)
+
+
+def audit_section(snap):
+    """Short 'Audit notes' from an outside eval audit. Numbers come from audit_notes();
+    the rubric note quotes public run pages."""
+    a = audit_notes(snap)
+    base = snap["source"]
+    run = lambda rid: f"{base}/runs/{rid}"
+    p = {m: round(v) for m, v in a["pooled"].items()}
+    o = {m: round(v) for m, v in a["overall"].items()}
+    by_h = {}
+    for m, h in a["harness"].items():
+        by_h.setdefault(h, []).append(m)
+    harness = "; ".join(f"{', '.join(ms)} ran in {'Codex CLI' if h == 'codex' else 'Claude Code' if h == 'claude' else h}" for h, ms in by_h.items())
+    share = round(100 * a["sole_share"] / a["lead_gap"]) if a["sole_share"] else None
+    return f"""<section id="audit"><h2>Audit notes</h2>
+<p class="small">An outside pass with a standard eval-audit checklist, public pages only. Questions, not verdicts.</p>
+<ul><li><b>One check can be worth 4x another.</b> Overall is the mean of task scores, so a check on {e(a['heavy'])} ({a['heavy_checks']} checks) moves Overall by {a['weight'][a['heavy']]:.1f} points and one on {e(a['light'])} ({a['light_checks']} checks) by {a['weight'][a['light']]:.1f}.{f" There, &ldquo;{e(a['sole_decider'])}&rdquo; is the only check that splits models, and it alone is {a['sole_share']:.1f} of the {a['lead_gap']:.0f}-point gap between {e(a['lead'])} and {e(a['second'])} (about {share}%)." if share else ""} Pooling checks instead gives Sonnet 5.5 {p['Sonnet 5.5']}%, Opus 5.5 {p['Opus 5.5']}%, GPT-5.6 {p['GPT-5.6']}% (public: {o['Sonnet 5.5']}, {o['Opus 5.5']}, {o['GPT-5.6']}). Is equal weight per task intended?</li>
+<li><b>Two ways to grade a list of options.</b> 10 of 29 judge rubrics fail a response if any offered version fails (&ldquo;PASS only if every offered version passes&rdquo;, D01, <a href="{run(1491)}">run 1491</a>). S04b passes if &ldquo;at least one&rdquo; proposed headline/dek pair works, while its sibling S02b fails if any proposed headline misses (<a href="{run(1490)}">run 1490</a>). S04b passes for every model; S02b fails 4 of 5. Should offering more options cost a model points?</li>
+<li><b>Model and harness move together.</b> {e(harness)}. The scoreboard shows this, but no model ran in both, so a gap can't be split between model and harness. One cross-run would tell.</li>
+<li><b>The judge is &ldquo;always Claude&rdquo;, and 2 of 5 contestants are Claude.</b> The public pages don't name the judge version or show judge-vs-human agreement. Claude models rank 3rd and 4th, so nothing points to favoritism, but a short blind human spot check (TPR/TNR per check) would settle it.</li></ul>
+<p class="small">Can't judge from outside: whether judges were checked against human labels, how few-shot examples were chosen, who labels traces, and when checks were last re-validated. The rubrics quote Dan's own review notes, which suggests the checks came from real feedback.</p></section>"""
 
 
 if __name__ == "__main__":

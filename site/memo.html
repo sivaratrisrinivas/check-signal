@@ -45,6 +45,13 @@ code{background:#f1efe9;padding:1px 5px;border-radius:4px;font-size:14px}
 <li>Where does the flagged phrase on tend-feed-card-writing come from? It isn't in the public answer files I could download.</li>
 <li>Are the low or missing token counts on some Opus 5.5 runs complete?</li>
 <li>How long does a benchmark tuning review take today? That decides how much time this saves.</li></ul></section>
+<section id="audit"><h2>Audit notes</h2>
+<p class="small">An outside pass with a standard eval-audit checklist, public pages only. Questions, not verdicts.</p>
+<ul><li><b>One check can be worth 4x another.</b> Overall is the mean of task scores, so a check on literary-analysis-follow-up (3 checks) moves Overall by 6.7 points and one on article-opening-feedback (12 checks) by 1.7. There, &ldquo;No unearned praise&rdquo; is the only check that splits models, and it alone is 6.7 of the 19-point gap between GPT-6.1 Sol and GPT-6 Sol (about 35%). Pooling checks instead gives Sonnet 5.5 59%, Opus 5.5 53%, GPT-5.6 53% (public: 55, 53, 51). Is equal weight per task intended?</li>
+<li><b>Two ways to grade a list of options.</b> 10 of 29 judge rubrics fail a response if any offered version fails (&ldquo;PASS only if every offered version passes&rdquo;, D01, <a href="https://checks.every.to/p/dans-editorial-checks/runs/1491">run 1491</a>). S04b passes if &ldquo;at least one&rdquo; proposed headline/dek pair works, while its sibling S02b fails if any proposed headline misses (<a href="https://checks.every.to/p/dans-editorial-checks/runs/1490">run 1490</a>). S04b passes for every model; S02b fails 4 of 5. Should offering more options cost a model points?</li>
+<li><b>Model and harness move together.</b> GPT-6.1 Sol, GPT-6 Sol, GPT-5.6 ran in Codex CLI; Sonnet 5.5, Opus 5.5 ran in Claude Code. The scoreboard shows this, but no model ran in both, so a gap can't be split between model and harness. One cross-run would tell.</li>
+<li><b>The judge is &ldquo;always Claude&rdquo;, and 2 of 5 contestants are Claude.</b> The public pages don't name the judge version or show judge-vs-human agreement. Claude models rank 3rd and 4th, so nothing points to favoritism, but a short blind human spot check (TPR/TNR per check) would settle it.</li></ul>
+<p class="small">Can't judge from outside: whether judges were checked against human labels, how few-shot examples were chosen, who labels traces, and when checks were last re-validated. The rubrics quote Dan's own review notes, which suggests the checks came from real feedback.</p></section>
 <section><h2>How I'd measure it in the product</h2>
 <ul><li>Share of checks that separate models, per benchmark, over time.</li>
 <li>Share of benchmarks where a flag is acted on within a week.</li>

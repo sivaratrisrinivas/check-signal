@@ -250,3 +250,40 @@ def switch(snap, current, candidate):
             both_fail.append(item)
     return {"current": current, "candidate": candidate, "gained": gained, "lost": lost,
             "both_pass": len(both_pass), "both_fail": len(both_fail)}
+
+
+def audit_notes(snap):
+    """Numbers behind the memo's audit notes: how much one check moves Overall,
+    the ranking if checks were pooled, and which harness ran each model."""
+    rows = check_matrix(snap)
+    n_tasks = len(snap["tasks"])
+    per_task = defaultdict(int)
+    deciding = defaultdict(list)
+    for r in rows:
+        per_task[r["task"]] += 1
+        if label(r) == "decides":
+            deciding[r["task"]].append(r["check"])
+    weight = {t: 100 / n / n_tasks for t, n in per_task.items()}  # Overall points per check
+    heavy = max(weight, key=weight.get)
+    light = min(weight, key=weight.get)
+    _, overall = task_scores(snap)
+    order = rank(overall)
+    lead, second = order[0], order[1]
+    sole = deciding[heavy][0] if len(deciding[heavy]) == 1 else None
+    sole_share = None
+    if sole:
+        row = next(r for r in rows if r["task"] == heavy and r["check"] == sole)
+        diff = (row["results"][lead] == "pass") - (row["results"][second] == "pass")
+        sole_share = diff * weight[heavy]
+    pooled = {}
+    for m in snap["models"]:
+        cs = [c for c in snap["cells"] if c["model"] == m]
+        pooled[m] = 100 * sum(c["passed"] for c in cs) / sum(c["applicable"] for c in cs)
+    harness = {r["model"]: r.get("agent") for r in snap["feed"]["runs"]}
+    return {
+        "weight": weight, "heavy": heavy, "light": light,
+        "heavy_checks": per_task[heavy], "light_checks": per_task[light],
+        "sole_decider": sole, "sole_share": sole_share,
+        "lead": lead, "second": second, "lead_gap": overall[lead] - overall[second],
+        "overall": overall, "pooled": pooled, "harness": harness,
+    }
