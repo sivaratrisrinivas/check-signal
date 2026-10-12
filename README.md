@@ -2,7 +2,7 @@
 
 **Which checks on a personal AI benchmark actually decide the pick?**
 
-Live: https://check-signal.onrender.com · 88 s video: https://check-signal.onrender.com/every-check-signal-demo.mp4 · [Memo](https://check-signal.onrender.com/memo.html)
+Live: https://check-signal.onrender.com · 93 s video (voiced): https://check-signal.onrender.com/every-check-signal-demo.mp4 · [Memo](https://check-signal.onrender.com/memo.html)
 
 **Why.** On release day you open your benchmark to decide whether to switch models. You see one score per model. You can't tell which of your own standards that score reflects, or whether a check can tell the models apart at all.
 
